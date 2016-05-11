@@ -20,6 +20,10 @@ elif system == "Linux":
 nScopeAPI.nScope_check_API_version.restype = c_double
 nScopeAPI.nScope_check_FW_version.restype = c_double
 
+# .. py:function:: enumerate(sequence[, start=0])
+#
+#    Return an iterator that yields tuples of an index and an item of the
+#    *sequence*. (And so on.)
 
 def checkAPIver():
 	return nScopeAPI.nScope_check_API_version()
@@ -87,6 +91,7 @@ class nScopeObj(object):
 			return rtrn
 
 	def readCh1(self,numsamples,samplerate):
+		numsamples = int(numsamples)
 		self.setChannelsOn(1,0,0,0)
 		self.setSampleRateInHz(samplerate)
 		self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
@@ -97,6 +102,7 @@ class nScopeObj(object):
 		self.request = None
 		return data
 	def readCh2(self,numsamples,samplerate):
+		numsamples = int(numsamples)
 		self.setChannelsOn(0,1,0,0)
 		self.setSampleRateInHz(samplerate)
 		self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
@@ -107,6 +113,7 @@ class nScopeObj(object):
 		self.request = None
 		return data
 	def readCh3(self,numsamples,samplerate):
+		numsamples = int(numsamples)
 		self.setChannelsOn(0,0,1,0)
 		self.setSampleRateInHz(samplerate)
 		self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
@@ -117,6 +124,7 @@ class nScopeObj(object):
 		self.request = None
 		return data
 	def readCh4(self,numsamples,samplerate):
+		numsamples = int(numsamples)
 		self.setChannelsOn(0,0,0,1)
 		self.setSampleRateInHz(samplerate)
 		self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
