@@ -9,32 +9,62 @@ nScope = nScopeObj()
 sampleRate = 44100.0
 numSamples = 1152
 
+nScope.setChannelsOn(1,1,0,0)
+nScope.setSampleRateInHz(sampleRate)
+
 fig = figure(figsize=(8,8))
 timeAx = subplot(2,1,1)
-data = nScope.readCh1(numSamples,sampleRate)
+
+nScope.requestData(numSamples)
+inputSig = []
+outputSig = []
+while nScope.requestHasData():
+    inputSig.append(nScope.readData(2))
+    outputSig.append(-nScope.readData(1))
+
+
 time = arange(numSamples)/sampleRate*1000.0
 axis([0,max(time),-2,2])
 xlabel('time (ms)')
 ylabel('voltage (v)')
 
-voltage, = plot(time,data)
+inVolts, = plot(time,inputSig,color='green')
+outVolts, = plot(time,outputSig,color='red')
 
 freqAx = subplot(2,1,2)
 freq = rfftfreq(numSamples)*sampleRate
-fftdata = abs(rfft(data))
 xlabel('frequency (Hz)')
 ylabel('magnitude')
-spectrum, = plot(freq,fftdata)
-axis([20,20000,0,numSamples])
-freqAx.set_xscale('log')
-freqAx.set_yscale('log')
+
+inFFT = abs(rfft(inputSig))
+outFFT = abs(rfft(outputSig))
+
+inSpec, = plot(log10(freq),log10(inFFT),color='green')
+outSpec, = plot(log10(freq),log10(outFFT),color='red')
+
+
+ylim([-1,log10(numSamples)])
+xt = log10(logspace(1,4,5)*2)
+xl = ['%3.0f' % x for x in 10**xt]
+xticks(xt,xl)
 
 
 def update(event):
-    data = nScope.readCh1(numSamples,sampleRate)
-    fftdata = abs(rfft(data))
-    voltage.set_ydata(data)
-    spectrum.set_ydata(fftdata)
+    nScope.requestData(numSamples)
+    inputSig = []
+    outputSig = []
+    while nScope.requestHasData():
+        inputSig.append(nScope.readData(2))
+        outputSig.append(-nScope.readData(1))
+
+    inVolts.set_ydata(inputSig)
+    outVolts.set_ydata(outputSig)
+
+    inFFT = abs(rfft(inputSig))
+    outFFT = abs(rfft(outputSig))
+
+    inSpec.set_ydata(log10(inFFT))
+    outSpec.set_ydata(log10(outFFT))
 
 
 ani = animation.FuncAnimation(fig, update, interval=16)
