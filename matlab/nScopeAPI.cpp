@@ -121,7 +121,10 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
                 nScope_release_request(nScope,&currentRequest);
                 currentRequest = NULL;
             }
-            currentRequest = nScope_request_data(nScope,mxGetScalar(prhs[1]),0);               
+            currentRequest = nScope_request_data(nScope,mxGetScalar(prhs[1]),0);
+            if(currentRequest == NULL){
+                mexErrMsgTxt(strcat(cmd,": invalid request"));
+            }
         } else {
             mexErrMsgTxt(strcat(cmd,": nScope is not connected"));
         }

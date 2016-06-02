@@ -20,10 +20,6 @@ elif system == "Linux":
 nScopeAPI.nScope_check_API_version.restype = c_double
 nScopeAPI.nScope_check_FW_version.restype = c_double
 
-# .. py:function:: enumerate(sequence[, start=0])
-#
-#    Return an iterator that yields tuples of an index and an item of the
-#    *sequence*. (And so on.)
 
 def checkAPIver():
 	return nScopeAPI.nScope_check_API_version()
@@ -60,6 +56,9 @@ class nScopeObj(object):
 		if self.request:
 			nScopeAPI.nScope_release_request(self.handle,byref(self.request))
 		self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
+		if not self.request:
+			raise ValueError("Invalid request")
+			return
 	def readData(self,channel):
 		rtrn = nScopeAPI.nScope_read_data(self.handle,byref(self.request),channel)
 		if rtrn == -106:
@@ -95,6 +94,9 @@ class nScopeObj(object):
 		self.setChannelsOn(1,0,0,0)
 		self.setSampleRateInHz(samplerate)
 		self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
+		if not self.request:
+			print 'Invalid Request'
+			return
 		data = []
 		while(nScopeAPI.nScope_request_has_data(self.handle,self.request)):
 			data.append(nScopeAPI.nScope_read_data(self.handle,byref(self.request),1))
@@ -106,6 +108,9 @@ class nScopeObj(object):
 		self.setChannelsOn(0,1,0,0)
 		self.setSampleRateInHz(samplerate)
 		self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
+		if not self.request:
+			print 'Invalid Request'
+			return
 		data = []
 		while(nScopeAPI.nScope_request_has_data(self.handle,self.request)):
 			data.append(nScopeAPI.nScope_read_data(self.handle,byref(self.request),2))
@@ -117,6 +122,9 @@ class nScopeObj(object):
 		self.setChannelsOn(0,0,1,0)
 		self.setSampleRateInHz(samplerate)
 		self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
+		if not self.request:
+			print 'Invalid Request'
+			return
 		data = []
 		while(nScopeAPI.nScope_request_has_data(self.handle,self.request)):
 			data.append(nScopeAPI.nScope_read_data(self.handle,byref(self.request),3))
@@ -128,6 +136,9 @@ class nScopeObj(object):
 		self.setChannelsOn(0,0,0,1)
 		self.setSampleRateInHz(samplerate)
 		self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
+		if not self.request:
+			print 'Invalid Request'
+			return
 		data = []
 		while(nScopeAPI.nScope_request_has_data(self.handle,self.request)):
 			data.append(nScopeAPI.nScope_read_data(self.handle,byref(self.request),4))

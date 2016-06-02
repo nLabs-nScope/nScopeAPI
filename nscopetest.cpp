@@ -33,8 +33,7 @@ int main(int argc, char* argv[])
 #endif
 
 	printf("API Version: %2.1f\n",nScope_check_API_version());
-	nScope_load_firmware();
-	// printf("FW Version: %2.1f\n",nScope_check_FW_version());
+	printf("FW Version: %2.1f\n",nScope_check_FW_version());
 
 
 
