@@ -1,0 +1,25 @@
+var n_scope_a_p_i__analog_outputs_8h =
+[
+    [ "SINE_WAVE", "n_scope_a_p_i__analog_outputs_8h.html#ad500bb5728db9c4d6bbe4681fd1b0549", null ],
+    [ "TRIANGLE_WAVE", "n_scope_a_p_i__analog_outputs_8h.html#adf2c26c1c7ded2a4f01f99554a4762f2", null ],
+    [ "nScope_get_A1_amplitude", "n_scope_a_p_i__analog_outputs_8h.html#a509b42cab05ff6aab098d457e9e49933", null ],
+    [ "nScope_get_A1_frequency_in_hz", "n_scope_a_p_i__analog_outputs_8h.html#ab0dcd940616c0c378b483579300cc29d", null ],
+    [ "nScope_get_A1_on", "n_scope_a_p_i__analog_outputs_8h.html#aab19d8c2e233ee0169f2160d942fa827", null ],
+    [ "nScope_get_A1_unipolar", "n_scope_a_p_i__analog_outputs_8h.html#aae4749d8ddc32a7f3e871549757b42cc", null ],
+    [ "nScope_get_A1_wave_type", "n_scope_a_p_i__analog_outputs_8h.html#ae3d540b0aac61def7c892bafa6b9d2fe", null ],
+    [ "nScope_get_A2_amplitude", "n_scope_a_p_i__analog_outputs_8h.html#a9a0c80b55df7686d1734483a59918019", null ],
+    [ "nScope_get_A2_frequency_in_hz", "n_scope_a_p_i__analog_outputs_8h.html#a3736eb1b450e1802a9a277061db8f948", null ],
+    [ "nScope_get_A2_on", "n_scope_a_p_i__analog_outputs_8h.html#a49556b9c28d48601b026e417b2a40c9d", null ],
+    [ "nScope_get_A2_unipolar", "n_scope_a_p_i__analog_outputs_8h.html#ae9d2d0250817bb403b5f577761523dc5", null ],
+    [ "nScope_get_A2_wave_type", "n_scope_a_p_i__analog_outputs_8h.html#aa81b9e3d0022057f68c3a3e4f5b22709", null ],
+    [ "nScope_set_A1_amplitude", "n_scope_a_p_i__analog_outputs_8h.html#ab43a352c0b5bc3fd85d7fa2c35576a7e", null ],
+    [ "nScope_set_A1_frequency_in_hz", "n_scope_a_p_i__analog_outputs_8h.html#a8d584f7a906321bc31cc82ba90754c9a", null ],
+    [ "nScope_set_A1_on", "n_scope_a_p_i__analog_outputs_8h.html#aafe50a411994e6cfe294c7aaa61700c1", null ],
+    [ "nScope_set_A1_unipolar", "n_scope_a_p_i__analog_outputs_8h.html#aacf4be680aa482df010a0aa50468868b", null ],
+    [ "nScope_set_A1_wave_type", "n_scope_a_p_i__analog_outputs_8h.html#a3675b5cd8358798cfad0311a74da8a68", null ],
+    [ "nScope_set_A2_amplitude", "n_scope_a_p_i__analog_outputs_8h.html#a08d92bff2ef704cd82d017b93d00500f", null ],
+    [ "nScope_set_A2_frequency_in_hz", "n_scope_a_p_i__analog_outputs_8h.html#a9e6ad92eaa1a48e75688e99987b37ab2", null ],
+    [ "nScope_set_A2_on", "n_scope_a_p_i__analog_outputs_8h.html#a7b1d8dfab1a11b63813599b0f3b7552b", null ],
+    [ "nScope_set_A2_unipolar", "n_scope_a_p_i__analog_outputs_8h.html#ae95e907fbe54337e8b1bcc722f535544", null ],
+    [ "nScope_set_A2_wave_type", "n_scope_a_p_i__analog_outputs_8h.html#a8af58e98e88d9462d8fe59338885aa18", null ]
+];
