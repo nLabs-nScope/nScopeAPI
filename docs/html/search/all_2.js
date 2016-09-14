@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['power_5foff',['power_off',['../n_scope_a_p_i_8h.html#aa59b8ef6374ae587f3c228eba57bdf80a54d551eead05b0791463fc0bc0f2e8f6',1,'nScopeAPI.h']]],
-  ['power_5fon',['power_on',['../n_scope_a_p_i_8h.html#aa59b8ef6374ae587f3c228eba57bdf80a1c5796d0cf6171776aeec052a5010bcc',1,'nScopeAPI.h']]],
-  ['powerstate',['PowerState',['../n_scope_a_p_i_8h.html#aa59b8ef6374ae587f3c228eba57bdf80',1,'nScopeAPI.h']]]
+  ['falling_5fedge',['FALLING_EDGE',['../n_scope_a_p_i__defs_8h.html#a3fb00e769f35af15cd9bc70644ee4f85ab88c132109a78c131815f270b8bef045',1,'nScopeAPI_defs.h']]],
+  ['fw_5fapi_5fincompatible',['FW_API_INCOMPATIBLE',['../n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45aa508b58199d77c9911c4c3b6547c5cbc4',1,'nScopeAPI_defs.h']]]
 ];

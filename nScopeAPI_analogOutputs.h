@@ -10,41 +10,33 @@
 
 ********************************************************/
 
+/** @file
+
+    @brief contains function headers for controlling the nScope analog outputs
+*/
+
 #ifndef NSCOPEAPI_ANALOGOUTPUTS_H__
 #define NSCOPEAPI_ANALOGOUTPUTS_H__
 
-
-#define SINE_WAVE       0
-#define TRIANGLE_WAVE   1
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-  double NSCOPE_API_EXPORT_CALL nScope_set_A1_frequency_in_hz(scopeHandle *nScope, double frequency);
-  double NSCOPE_API_EXPORT_CALL nScope_get_A1_frequency_in_hz(scopeHandle *nScope);
-  double NSCOPE_API_EXPORT_CALL nScope_set_A2_frequency_in_hz(scopeHandle *nScope, double frequency);
-  double NSCOPE_API_EXPORT_CALL nScope_get_A2_frequency_in_hz(scopeHandle *nScope);
+    NSCOPE_API ErrorType nScope_set_AX_on(ScopeHandle nScope, int aChannel, bool aOn);
+    NSCOPE_API ErrorType nScope_get_AX_on(ScopeHandle nScope, int aChannel, bool* aOn);
 
-  int NSCOPE_API_EXPORT_CALL nScope_set_A1_wave_type(scopeHandle *nScope, int wave);
-  int NSCOPE_API_EXPORT_CALL nScope_get_A1_wave_type(scopeHandle *nScope);
-  int NSCOPE_API_EXPORT_CALL nScope_set_A2_wave_type(scopeHandle *nScope, int wave);
-  int NSCOPE_API_EXPORT_CALL nScope_get_A2_wave_type(scopeHandle *nScope);
+    NSCOPE_API ErrorType nScope_set_AX_frequency_in_hz(ScopeHandle nScope, int aChannel, double frequency);
+    NSCOPE_API ErrorType nScope_get_AX_frequency_in_hz(ScopeHandle nScope, int aChannel, double* frequency);
 
-  int NSCOPE_API_EXPORT_CALL nScope_set_A1_on(scopeHandle *nScope, int aoOn);
-  int NSCOPE_API_EXPORT_CALL nScope_get_A1_on(scopeHandle *nScope);
-  int NSCOPE_API_EXPORT_CALL nScope_set_A2_on(scopeHandle *nScope, int aoOn);
-  int NSCOPE_API_EXPORT_CALL nScope_get_A2_on(scopeHandle *nScope);
+    NSCOPE_API ErrorType nScope_set_AX_wave_type(ScopeHandle nScope, int aChannel, WaveType wave);
+    NSCOPE_API ErrorType nScope_get_AX_wave_type(ScopeHandle nScope, int aChannel, WaveType* wave);
 
-  int NSCOPE_API_EXPORT_CALL nScope_set_A1_unipolar(scopeHandle *nScope, int unipolar);
-  int NSCOPE_API_EXPORT_CALL nScope_get_A1_unipolar(scopeHandle *nScope);
-  int NSCOPE_API_EXPORT_CALL nScope_set_A2_unipolar(scopeHandle *nScope, int unipolar);
-  int NSCOPE_API_EXPORT_CALL nScope_get_A2_unipolar(scopeHandle *nScope);
+    NSCOPE_API ErrorType nScope_set_AX_unipolar(ScopeHandle nScope, int aChannel, bool isUnipolar);
+    NSCOPE_API ErrorType nScope_get_AX_unipolar(ScopeHandle nScope, int aChannel, bool* isUnipolar);
 
-  double NSCOPE_API_EXPORT_CALL nScope_set_A1_amplitude(scopeHandle *nScope, double amplitude);
-  double NSCOPE_API_EXPORT_CALL nScope_get_A1_amplitude(scopeHandle *nScope);
-  double NSCOPE_API_EXPORT_CALL nScope_set_A2_amplitude(scopeHandle *nScope, double amplitude);
-  double NSCOPE_API_EXPORT_CALL nScope_get_A2_amplitude(scopeHandle *nScope);
+    NSCOPE_API ErrorType nScope_set_AX_amplitude(ScopeHandle nScope, int aChannel, double amplitude);
+    NSCOPE_API ErrorType nScope_get_AX_amplitude(ScopeHandle nScope, int aChannel, double* amplitude);
 
 #ifdef __cplusplus
 }

@@ -10,6 +10,11 @@
 
 ********************************************************/
 
+/** @file
+
+    @brief contains function headers for making requests to nScope
+*/
+
 #ifndef NSCOPEAPI_REQUESTS_H__
 #define NSCOPEAPI_REQUESTS_H__
 
@@ -18,16 +23,16 @@
 extern "C" {
 #endif
 
-	NSCOPE_API_EXPORT_CALL request* nScope_request_data(scopeHandle *nScope, int numSamples, int antiAliased);
-	NSCOPE_API_EXPORT_CALL request* nScope_request_data_stream(scopeHandle *nScope);
-    int NSCOPE_API_EXPORT_CALL nScope_stop_request(scopeHandle* nScope, request* reqHandle);
-    int NSCOPE_API_EXPORT_CALL nScope_release_request(scopeHandle* nScope, request** reqHandle_p);
-    int NSCOPE_API_EXPORT_CALL nScope_wait_for_request_finish(scopeHandle* nScope,request *reqHandle);
-    int NSCOPE_API_EXPORT_CALL nScope_request_xfer_has_completed(scopeHandle* nScope,request* reqHandle);
-    int NSCOPE_API_EXPORT_CALL nScope_request_xfer_samples_remaining(scopeHandle* nScope,request * reqHandle);
-    int NSCOPE_API_EXPORT_CALL nScope_stop_data_stream(scopeHandle* nScope,request* reqHandle);
-    double NSCOPE_API_EXPORT_CALL nScope_read_data(scopeHandle* nScope,request** reqHandle, int channel);
-    int NSCOPE_API_EXPORT_CALL nScope_request_has_data(scopeHandle* nScope,request** reqHandle_p);
+	NSCOPE_API ErrorType nScope_request_data(ScopeHandle nScope, Request newRequest, int numSamples, int antiAliased);
+	NSCOPE_API ErrorType nScope_request_data_stream(ScopeHandle nScope, Request newRequest);
+    NSCOPE_API ErrorType nScope_stop_request(ScopeHandle nScope, Request reqHandle);
+    NSCOPE_API ErrorType nScope_release_request(ScopeHandle nScope, Request reqHandle);
+    NSCOPE_API ErrorType nScope_wait_for_request_finish(ScopeHandle nScope,Request reqHandle);
+    NSCOPE_API ErrorType nScope_request_xfer_has_completed(ScopeHandle nScope, Request reqHandle, bool* hasCompleted);
+    NSCOPE_API ErrorType nScope_request_xfer_samples_remaining(ScopeHandle nScope, Request reqHandle);
+    NSCOPE_API ErrorType nScope_stop_data_stream(ScopeHandle nScope, Request reqHandle);
+    NSCOPE_API ErrorType nScope_read_data(ScopeHandle nScope, Request reqHandle, int channel, double* data);
+	NSCOPE_API ErrorType nScope_request_has_data(ScopeHandle nScope, Request reqHandle, bool* hasData);
 
 #ifdef __cplusplus
 }

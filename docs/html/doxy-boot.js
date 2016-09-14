@@ -92,8 +92,8 @@ $( document ).ready(function() {
 		if(getOriginalWidthOfImg($(this)[0]) > $('#content>div.container').width())
 			$(this).css('width', '100%');
 	});
-	
-  
+
+
   /* responsive search box */
   $('#MSearchBox').parent().remove();
 

@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('n_scope_a_p_i__requests_8h.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('n_scope_a_p_i__requests_8h.html','');}
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c086a797e1f8ae3f1bbc93a0b10bf3e7.html">nScopeAPI</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -87,324 +70,50 @@ $(document).ready(function(){initNavTree('n_scope_a_p_i__requests_8h.html','');}
 </div><!--header-->
 <div class="contents">
 
-<p><a href="n_scope_a_p_i__requests_8h_source.html">Go to the source code of this file.</a></p>
+<p>contains function headers for making requests to nScope  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab2b2b1a5dbafbef1bbf1fa9c57c239be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#ab2b2b1a5dbafbef1bbf1fa9c57c239be">nScope_request_data</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int numSamples, int antiAliased)</td></tr>
-<tr class="separator:ab2b2b1a5dbafbef1bbf1fa9c57c239be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35e99a932b96bf07761670035a423b90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#a35e99a932b96bf07761670035a423b90">nScope_request_data_stream</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a35e99a932b96bf07761670035a423b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae368aa26b839ecc31e55f3c25bbc4cd2"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#ae368aa26b839ecc31e55f3c25bbc4cd2">nScope_stop_request</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *reqHandle)</td></tr>
-<tr class="separator:ae368aa26b839ecc31e55f3c25bbc4cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6096c64e6398d1ef9aed22a8b5881c5"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#ab6096c64e6398d1ef9aed22a8b5881c5">nScope_release_request</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> **reqHandle_p)</td></tr>
-<tr class="separator:ab6096c64e6398d1ef9aed22a8b5881c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2e2db10d10695eb8ebb6e9934436b29"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#ad2e2db10d10695eb8ebb6e9934436b29">nScope_wait_for_request_finish</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *reqHandle)</td></tr>
-<tr class="separator:ad2e2db10d10695eb8ebb6e9934436b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac00d4ec1edf16bab74b18ac1286136df"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#ac00d4ec1edf16bab74b18ac1286136df">nScope_request_xfer_has_completed</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *reqHandle)</td></tr>
-<tr class="separator:ac00d4ec1edf16bab74b18ac1286136df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5db7d86864457cc0aae216884abb08b5"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#a5db7d86864457cc0aae216884abb08b5">nScope_request_xfer_samples_remaining</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *reqHandle)</td></tr>
-<tr class="separator:a5db7d86864457cc0aae216884abb08b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc7c29029178ba9f5dd4cfb85eddc468"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#adc7c29029178ba9f5dd4cfb85eddc468">nScope_stop_data_stream</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *reqHandle)</td></tr>
-<tr class="separator:adc7c29029178ba9f5dd4cfb85eddc468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24e054ac2e7b695318bd851a06a5f336"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#a24e054ac2e7b695318bd851a06a5f336">nScope_read_data</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> **reqHandle, int channel)</td></tr>
-<tr class="separator:a24e054ac2e7b695318bd851a06a5f336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae76e0c26e5f1890cf0d66a37151ba65a"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#ae76e0c26e5f1890cf0d66a37151ba65a">nScope_request_has_data</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> **reqHandle_p)</td></tr>
-<tr class="separator:ae76e0c26e5f1890cf0d66a37151ba65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56c58b77a7d44411f8fda9f0e321248"><td class="memItemLeft" align="right" valign="top"><a id="ae56c58b77a7d44411f8fda9f0e321248"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_request_data</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> newRequest, int numSamples, int antiAliased)</td></tr>
+<tr class="separator:ae56c58b77a7d44411f8fda9f0e321248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae37040f602c6e0b3b79e6fcb5ba085"><td class="memItemLeft" align="right" valign="top"><a id="a2ae37040f602c6e0b3b79e6fcb5ba085"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_request_data_stream</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> newRequest)</td></tr>
+<tr class="separator:a2ae37040f602c6e0b3b79e6fcb5ba085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b3d548477e9d65b75ee3c0d087916b"><td class="memItemLeft" align="right" valign="top"><a id="ad8b3d548477e9d65b75ee3c0d087916b"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_stop_request</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle)</td></tr>
+<tr class="separator:ad8b3d548477e9d65b75ee3c0d087916b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad9a5e3a1503ba1fe189af02c61e28a"><td class="memItemLeft" align="right" valign="top"><a id="a6ad9a5e3a1503ba1fe189af02c61e28a"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_release_request</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle)</td></tr>
+<tr class="separator:a6ad9a5e3a1503ba1fe189af02c61e28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afffc028cb7b4b0a879ff49752ddddf64"><td class="memItemLeft" align="right" valign="top"><a id="afffc028cb7b4b0a879ff49752ddddf64"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_wait_for_request_finish</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle)</td></tr>
+<tr class="separator:afffc028cb7b4b0a879ff49752ddddf64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa03f4d980ce7a0cc3f1aeb2367ee06"><td class="memItemLeft" align="right" valign="top"><a id="aeaa03f4d980ce7a0cc3f1aeb2367ee06"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_request_xfer_has_completed</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle, bool *hasCompleted)</td></tr>
+<tr class="separator:aeaa03f4d980ce7a0cc3f1aeb2367ee06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536b2a337a87568d3ce38ac9b2548e25"><td class="memItemLeft" align="right" valign="top"><a id="a536b2a337a87568d3ce38ac9b2548e25"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_request_xfer_samples_remaining</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle)</td></tr>
+<tr class="separator:a536b2a337a87568d3ce38ac9b2548e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c217356b3e3edfd26494b3ee0b6c67d"><td class="memItemLeft" align="right" valign="top"><a id="a0c217356b3e3edfd26494b3ee0b6c67d"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_stop_data_stream</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle)</td></tr>
+<tr class="separator:a0c217356b3e3edfd26494b3ee0b6c67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a145bd898995ebf8510c9815b332d3d4a"><td class="memItemLeft" align="right" valign="top"><a id="a145bd898995ebf8510c9815b332d3d4a"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_read_data</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle, int channel, double *data)</td></tr>
+<tr class="separator:a145bd898995ebf8510c9815b332d3d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5f8d9bb0cb04ad3b587207c358ebe5"><td class="memItemLeft" align="right" valign="top"><a id="a3e5f8d9bb0cb04ad3b587207c358ebe5"></a>
+<a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nScope_request_has_data</b> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle, bool *hasData)</td></tr>
+<tr class="separator:a3e5f8d9bb0cb04ad3b587207c358ebe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a24e054ac2e7b695318bd851a06a5f336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24e054ac2e7b695318bd851a06a5f336">&sect;&nbsp;</a></span>nScope_read_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_read_data </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> **&#160;</td>
-          <td class="paramname"><em>reqHandle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>channel</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab6096c64e6398d1ef9aed22a8b5881c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6096c64e6398d1ef9aed22a8b5881c5">&sect;&nbsp;</a></span>nScope_release_request()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_release_request </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> **&#160;</td>
-          <td class="paramname"><em>reqHandle_p</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab2b2b1a5dbafbef1bbf1fa9c57c239be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2b2b1a5dbafbef1bbf1fa9c57c239be">&sect;&nbsp;</a></span>nScope_request_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a>* nScope_request_data </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>numSamples</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>antiAliased</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a35e99a932b96bf07761670035a423b90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35e99a932b96bf07761670035a423b90">&sect;&nbsp;</a></span>nScope_request_data_stream()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> <a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a>* nScope_request_data_stream </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae76e0c26e5f1890cf0d66a37151ba65a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae76e0c26e5f1890cf0d66a37151ba65a">&sect;&nbsp;</a></span>nScope_request_has_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_request_has_data </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> **&#160;</td>
-          <td class="paramname"><em>reqHandle_p</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac00d4ec1edf16bab74b18ac1286136df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac00d4ec1edf16bab74b18ac1286136df">&sect;&nbsp;</a></span>nScope_request_xfer_has_completed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_request_xfer_has_completed </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *&#160;</td>
-          <td class="paramname"><em>reqHandle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5db7d86864457cc0aae216884abb08b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5db7d86864457cc0aae216884abb08b5">&sect;&nbsp;</a></span>nScope_request_xfer_samples_remaining()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_request_xfer_samples_remaining </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *&#160;</td>
-          <td class="paramname"><em>reqHandle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adc7c29029178ba9f5dd4cfb85eddc468"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc7c29029178ba9f5dd4cfb85eddc468">&sect;&nbsp;</a></span>nScope_stop_data_stream()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_stop_data_stream </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *&#160;</td>
-          <td class="paramname"><em>reqHandle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae368aa26b839ecc31e55f3c25bbc4cd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae368aa26b839ecc31e55f3c25bbc4cd2">&sect;&nbsp;</a></span>nScope_stop_request()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_stop_request </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *&#160;</td>
-          <td class="paramname"><em>reqHandle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad2e2db10d10695eb8ebb6e9934436b29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2e2db10d10695eb8ebb6e9934436b29">&sect;&nbsp;</a></span>nScope_wait_for_request_finish()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_wait_for_request_finish </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#ab082f5f00806d6a6712e922ce16b3fde">request</a> *&#160;</td>
-          <td class="paramname"><em>reqHandle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
-</div><!-- doc-content -->
+<a name="details" id="details"></a><h2 class="groupheader">Documentation</h2>
+<div class="textblock"><p>contains function headers for making requests to nScope </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_c086a797e1f8ae3f1bbc93a0b10bf3e7.html">nScopeAPI</a></li><li class="navelem"><a class="el" href="n_scope_a_p_i__requests_8h.html">nScopeAPI_requests.h</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Tue Sep 13 2016 21:07:47 for nScopeAPI by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.12
+</small></address>
 </body>
 </html>

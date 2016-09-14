@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('n_scope_a_p_i__analog_inputs_8h.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('n_scope_a_p_i__analog_inputs_8h.html',
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c086a797e1f8ae3f1bbc93a0b10bf3e7.html">nScopeAPI</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -87,396 +70,64 @@ $(document).ready(function(){initNavTree('n_scope_a_p_i__analog_inputs_8h.html',
 </div><!--header-->
 <div class="contents">
 
-<p><a href="n_scope_a_p_i__analog_inputs_8h_source.html">Go to the source code of this file.</a></p>
+<p>contains function headers for controlling the nScope analog inputs  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a53faa3f666b6f3f672e2cbbdcead3ec4"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a53faa3f666b6f3f672e2cbbdcead3ec4">nScope_set_channels_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int ch1on, int ch2on, int ch3on, int ch4on)</td></tr>
-<tr class="separator:a53faa3f666b6f3f672e2cbbdcead3ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad397c602d654152cd248ec4a2e95eb38"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#ad397c602d654152cd248ec4a2e95eb38">nScope_get_channels_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int *channelsOn)</td></tr>
-<tr class="separator:ad397c602d654152cd248ec4a2e95eb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac600362768a4edaedca52a8b73a8c2c5"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#ac600362768a4edaedca52a8b73a8c2c5">nScope_get_num_channels_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:ac600362768a4edaedca52a8b73a8c2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab109409ee6ecb53dca06a2493f924291"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#ab109409ee6ecb53dca06a2493f924291">nScope_set_ch_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int ch, int channelOn)</td></tr>
-<tr class="separator:ab109409ee6ecb53dca06a2493f924291"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1a86d36b12e035f26f3622ebc6f61b9"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#aa1a86d36b12e035f26f3622ebc6f61b9">nScope_get_ch_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int ch)</td></tr>
-<tr class="separator:aa1a86d36b12e035f26f3622ebc6f61b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c1f8a101ce5df9ee2b229b4fde418f4"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a7c1f8a101ce5df9ee2b229b4fde418f4">nScope_set_ch1_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int channelOn)</td></tr>
-<tr class="separator:a7c1f8a101ce5df9ee2b229b4fde418f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad06ed0b28c4480b17608b6d09924594"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#aad06ed0b28c4480b17608b6d09924594">nScope_get_ch1_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:aad06ed0b28c4480b17608b6d09924594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a116ef3f02a62e15eada2fba3e44a707c"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a116ef3f02a62e15eada2fba3e44a707c">nScope_set_ch2_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int channelOn)</td></tr>
-<tr class="separator:a116ef3f02a62e15eada2fba3e44a707c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea93947ae55e28a26db974d59c88a11"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#adea93947ae55e28a26db974d59c88a11">nScope_get_ch2_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:adea93947ae55e28a26db974d59c88a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c3f9bd343ce39afb4364a1f28928004"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a7c3f9bd343ce39afb4364a1f28928004">nScope_set_ch3_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int channelOn)</td></tr>
-<tr class="separator:a7c3f9bd343ce39afb4364a1f28928004"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b3554c5e1f234e30aec10179a2026d2"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a7b3554c5e1f234e30aec10179a2026d2">nScope_get_ch3_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a7b3554c5e1f234e30aec10179a2026d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a814b558275fe29983a75616add3e7f9d"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a814b558275fe29983a75616add3e7f9d">nScope_set_ch4_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int channelOn)</td></tr>
-<tr class="separator:a814b558275fe29983a75616add3e7f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a751c38643179546d41c693b886ef7687"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a751c38643179546d41c693b886ef7687">nScope_get_ch4_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a751c38643179546d41c693b886ef7687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a4c018502ec4fc07fac763c9211d592"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a6a4c018502ec4fc07fac763c9211d592">nScope_get_ch_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int ch)</td></tr>
-<tr class="separator:a6a4c018502ec4fc07fac763c9211d592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a799e9e3181a01e80d4024b77bac01ef9"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a799e9e3181a01e80d4024b77bac01ef9">nScope_set_ch_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int ch, double channelGain)</td></tr>
-<tr class="separator:a799e9e3181a01e80d4024b77bac01ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33e158034c2a697bdd43126808287563"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a33e158034c2a697bdd43126808287563">nScope_set_ch1_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double channelGain)</td></tr>
-<tr class="separator:a33e158034c2a697bdd43126808287563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa001e15241fc5e7617dbc8ea5201c7c4"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#aa001e15241fc5e7617dbc8ea5201c7c4">nScope_get_ch1_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:aa001e15241fc5e7617dbc8ea5201c7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc94bb2edb28bb42a4d2c49b7846e3dc"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#abc94bb2edb28bb42a4d2c49b7846e3dc">nScope_set_ch2_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double channelGain)</td></tr>
-<tr class="separator:abc94bb2edb28bb42a4d2c49b7846e3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f8a11e61a38e83ff62472663a88aaac"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a5f8a11e61a38e83ff62472663a88aaac">nScope_get_ch2_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a5f8a11e61a38e83ff62472663a88aaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a782093395231f87b80e62f5e430499d9"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a782093395231f87b80e62f5e430499d9">nScope_set_ch3_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double channelGain)</td></tr>
-<tr class="separator:a782093395231f87b80e62f5e430499d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d31a496195193ec2dfd4b10fbd1f105"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a1d31a496195193ec2dfd4b10fbd1f105">nScope_get_ch3_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a1d31a496195193ec2dfd4b10fbd1f105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a754eb61cf6f19b6067a185e5b59750d6"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a754eb61cf6f19b6067a185e5b59750d6">nScope_set_ch4_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double channelGain)</td></tr>
-<tr class="separator:a754eb61cf6f19b6067a185e5b59750d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8778cb15d672017eb1ab2fa2e2a77c48"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a8778cb15d672017eb1ab2fa2e2a77c48">nScope_get_ch4_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a8778cb15d672017eb1ab2fa2e2a77c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a110d10429fb26cdb03ea992f81391398"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a110d10429fb26cdb03ea992f81391398">nScope_set_channel_gains</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double ch1Gain, double ch2Gain, double ch3Gain, double ch4Gain)</td></tr>
-<tr class="separator:a110d10429fb26cdb03ea992f81391398"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d192a5fefe48b2df47a53f9ee3b1562"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a6d192a5fefe48b2df47a53f9ee3b1562">nScope_get_channel_gains</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double *channelGains)</td></tr>
-<tr class="separator:a6d192a5fefe48b2df47a53f9ee3b1562"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d529abaa5fd6669970dc7657621b216"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a0d529abaa5fd6669970dc7657621b216">nScope_get_ch_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int ch)</td></tr>
-<tr class="separator:a0d529abaa5fd6669970dc7657621b216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac231b8d00dc654515556799f42feea93"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#ac231b8d00dc654515556799f42feea93">nScope_set_ch_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, int ch, double channelLevel)</td></tr>
-<tr class="separator:ac231b8d00dc654515556799f42feea93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a174cc15d8d2b665e9a6e9e5f561f0bd3"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a174cc15d8d2b665e9a6e9e5f561f0bd3">nScope_set_ch1_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double channelLevel)</td></tr>
-<tr class="separator:a174cc15d8d2b665e9a6e9e5f561f0bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a38e1e16adeb6c93cfecf8561be3c99"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a3a38e1e16adeb6c93cfecf8561be3c99">nScope_get_ch1_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a3a38e1e16adeb6c93cfecf8561be3c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c85aac18d8f1a3bd70b0b0b7896dff6"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a9c85aac18d8f1a3bd70b0b0b7896dff6">nScope_set_ch2_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double channelLevel)</td></tr>
-<tr class="separator:a9c85aac18d8f1a3bd70b0b0b7896dff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143babd45bb5ab4cda705526d859a63d"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a143babd45bb5ab4cda705526d859a63d">nScope_get_ch2_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a143babd45bb5ab4cda705526d859a63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbb211f825baeccce1b6fc9df4b7c58a"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#abbb211f825baeccce1b6fc9df4b7c58a">nScope_set_ch3_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double channelLevel)</td></tr>
-<tr class="separator:abbb211f825baeccce1b6fc9df4b7c58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29ebba9cb8c77edc895802b3d876150a"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a29ebba9cb8c77edc895802b3d876150a">nScope_get_ch3_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a29ebba9cb8c77edc895802b3d876150a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a499c27a6af21be30cbe943b98fb4d4fa"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a499c27a6af21be30cbe943b98fb4d4fa">nScope_set_ch4_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double channelLevel)</td></tr>
-<tr class="separator:a499c27a6af21be30cbe943b98fb4d4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a2311ede52826b11ea6ba8298b54531"><td class="memItemLeft" align="right" valign="top">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a7a2311ede52826b11ea6ba8298b54531">nScope_get_ch4_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope)</td></tr>
-<tr class="separator:a7a2311ede52826b11ea6ba8298b54531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5946610f0521501b20584357bb395e20"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a5946610f0521501b20584357bb395e20">nScope_set_channel_levels</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double ch1Level, double ch2Level, double ch3Level, double ch4Level)</td></tr>
-<tr class="separator:a5946610f0521501b20584357bb395e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c5a404affeca184110c7b8c5a20624d"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a8c5a404affeca184110c7b8c5a20624d">nScope_get_channel_levels</a> (<a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *nScope, double *channelLevels)</td></tr>
-<tr class="separator:a8c5a404affeca184110c7b8c5a20624d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af575926c9a8039dae219bed51d5e5bd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#af575926c9a8039dae219bed51d5e5bd4">nScope_set_channels_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, bool ch1on, bool ch2on, bool ch3on, bool ch4on)</td></tr>
+<tr class="memdesc:af575926c9a8039dae219bed51d5e5bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the channel states (on/off) for all channels.  <a href="#af575926c9a8039dae219bed51d5e5bd4">More...</a><br /></td></tr>
+<tr class="separator:af575926c9a8039dae219bed51d5e5bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea2851fc4df8d1e23eed54197f77877"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a6ea2851fc4df8d1e23eed54197f77877">nScope_get_channels_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, bool *channelsOn)</td></tr>
+<tr class="memdesc:a6ea2851fc4df8d1e23eed54197f77877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the channel states (on/off) for all channels.  <a href="#a6ea2851fc4df8d1e23eed54197f77877">More...</a><br /></td></tr>
+<tr class="separator:a6ea2851fc4df8d1e23eed54197f77877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa272b74d32fb33c0d922ac95d88522c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#aa272b74d32fb33c0d922ac95d88522c6">nScope_get_num_channels_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, int *numChannelsOn)</td></tr>
+<tr class="memdesc:aa272b74d32fb33c0d922ac95d88522c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of channels currently on.  <a href="#aa272b74d32fb33c0d922ac95d88522c6">More...</a><br /></td></tr>
+<tr class="separator:aa272b74d32fb33c0d922ac95d88522c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52afb150e9b397c1c717a4b7edd63c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#ab52afb150e9b397c1c717a4b7edd63c9">nScope_set_ChX_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, int ch, bool channelOn)</td></tr>
+<tr class="memdesc:ab52afb150e9b397c1c717a4b7edd63c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a channel state on or off.  <a href="#ab52afb150e9b397c1c717a4b7edd63c9">More...</a><br /></td></tr>
+<tr class="separator:ab52afb150e9b397c1c717a4b7edd63c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af629d8436a174b20a3d46b93b32138de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#af629d8436a174b20a3d46b93b32138de">nScope_get_ChX_on</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, int ch, bool *channelOn)</td></tr>
+<tr class="memdesc:af629d8436a174b20a3d46b93b32138de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the on/off state of a given channel.  <a href="#af629d8436a174b20a3d46b93b32138de">More...</a><br /></td></tr>
+<tr class="separator:af629d8436a174b20a3d46b93b32138de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf27c4f8b3ac886a4e91592b1edc1eb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#abf27c4f8b3ac886a4e91592b1edc1eb1">nScope_set_channel_gains</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, double ch1Gain, double ch2Gain, double ch3Gain, double ch4Gain)</td></tr>
+<tr class="memdesc:abf27c4f8b3ac886a4e91592b1edc1eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the channel gains for all channels.  <a href="#abf27c4f8b3ac886a4e91592b1edc1eb1">More...</a><br /></td></tr>
+<tr class="separator:abf27c4f8b3ac886a4e91592b1edc1eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a103b350a8c6c0c6acfc0bb4342d46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#af9a103b350a8c6c0c6acfc0bb4342d46">nScope_get_channel_gains</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, double *channelGains)</td></tr>
+<tr class="memdesc:af9a103b350a8c6c0c6acfc0bb4342d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the channel gains for all channels.  <a href="#af9a103b350a8c6c0c6acfc0bb4342d46">More...</a><br /></td></tr>
+<tr class="separator:af9a103b350a8c6c0c6acfc0bb4342d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f127bad1e5a6055de83da66aba08db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#ad0f127bad1e5a6055de83da66aba08db">nScope_set_ChX_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, int ch, double channelGain)</td></tr>
+<tr class="memdesc:ad0f127bad1e5a6055de83da66aba08db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a given channel's gain.  <a href="#ad0f127bad1e5a6055de83da66aba08db">More...</a><br /></td></tr>
+<tr class="separator:ad0f127bad1e5a6055de83da66aba08db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5033e36060076f10d307cbbdcf954ef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a5033e36060076f10d307cbbdcf954ef5">nScope_get_ChX_gain</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, int ch, double *channelGain)</td></tr>
+<tr class="memdesc:a5033e36060076f10d307cbbdcf954ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the gain of a given channel.  <a href="#a5033e36060076f10d307cbbdcf954ef5">More...</a><br /></td></tr>
+<tr class="separator:a5033e36060076f10d307cbbdcf954ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de8c03b8301ab5a7b3a5656971458ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a0de8c03b8301ab5a7b3a5656971458ff">nScope_set_channel_levels</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, double ch1Level, double ch2Level, double ch3Level, double ch4Level)</td></tr>
+<tr class="memdesc:a0de8c03b8301ab5a7b3a5656971458ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the channel levels for all channels.  <a href="#a0de8c03b8301ab5a7b3a5656971458ff">More...</a><br /></td></tr>
+<tr class="separator:a0de8c03b8301ab5a7b3a5656971458ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108653ff73012cf2e5daad252beb48fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a108653ff73012cf2e5daad252beb48fd">nScope_get_channel_levels</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, double *channelLevels)</td></tr>
+<tr class="memdesc:a108653ff73012cf2e5daad252beb48fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the channel levels for all channels.  <a href="#a108653ff73012cf2e5daad252beb48fd">More...</a><br /></td></tr>
+<tr class="separator:a108653ff73012cf2e5daad252beb48fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a1abb29344cd277e389607b2933636"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#a28a1abb29344cd277e389607b2933636">nScope_set_ChX_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, int ch, double channelLevel)</td></tr>
+<tr class="memdesc:a28a1abb29344cd277e389607b2933636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a given channel's level.  <a href="#a28a1abb29344cd277e389607b2933636">More...</a><br /></td></tr>
+<tr class="separator:a28a1abb29344cd277e389607b2933636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab06fec4622272c7ac45743853a2e2ae5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html#ab06fec4622272c7ac45743853a2e2ae5">nScope_get_ChX_level</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, int ch, double *channelLevel)</td></tr>
+<tr class="memdesc:ab06fec4622272c7ac45743853a2e2ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the level of a given channel.  <a href="#ab06fec4622272c7ac45743853a2e2ae5">More...</a><br /></td></tr>
+<tr class="separator:ab06fec4622272c7ac45743853a2e2ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aa001e15241fc5e7617dbc8ea5201c7c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa001e15241fc5e7617dbc8ea5201c7c4">&sect;&nbsp;</a></span>nScope_get_ch1_gain()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Documentation</h2>
+<div class="textblock"><p>contains function headers for controlling the nScope analog inputs </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="af9a103b350a8c6c0c6acfc0bb4342d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a103b350a8c6c0c6acfc0bb4342d46">&sect;&nbsp;</a></span>nScope_get_channel_gains()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch1_gain </td>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_get_channel_gains </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3a38e1e16adeb6c93cfecf8561be3c99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a38e1e16adeb6c93cfecf8561be3c99">&sect;&nbsp;</a></span>nScope_get_ch1_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch1_level </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aad06ed0b28c4480b17608b6d09924594"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad06ed0b28c4480b17608b6d09924594">&sect;&nbsp;</a></span>nScope_get_ch1_on()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch1_on </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5f8a11e61a38e83ff62472663a88aaac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f8a11e61a38e83ff62472663a88aaac">&sect;&nbsp;</a></span>nScope_get_ch2_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch2_gain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a143babd45bb5ab4cda705526d859a63d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a143babd45bb5ab4cda705526d859a63d">&sect;&nbsp;</a></span>nScope_get_ch2_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch2_level </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adea93947ae55e28a26db974d59c88a11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adea93947ae55e28a26db974d59c88a11">&sect;&nbsp;</a></span>nScope_get_ch2_on()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch2_on </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1d31a496195193ec2dfd4b10fbd1f105"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d31a496195193ec2dfd4b10fbd1f105">&sect;&nbsp;</a></span>nScope_get_ch3_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch3_gain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a29ebba9cb8c77edc895802b3d876150a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29ebba9cb8c77edc895802b3d876150a">&sect;&nbsp;</a></span>nScope_get_ch3_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch3_level </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7b3554c5e1f234e30aec10179a2026d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b3554c5e1f234e30aec10179a2026d2">&sect;&nbsp;</a></span>nScope_get_ch3_on()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch3_on </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8778cb15d672017eb1ab2fa2e2a77c48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8778cb15d672017eb1ab2fa2e2a77c48">&sect;&nbsp;</a></span>nScope_get_ch4_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch4_gain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7a2311ede52826b11ea6ba8298b54531"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a2311ede52826b11ea6ba8298b54531">&sect;&nbsp;</a></span>nScope_get_ch4_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch4_level </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a751c38643179546d41c693b886ef7687"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a751c38643179546d41c693b886ef7687">&sect;&nbsp;</a></span>nScope_get_ch4_on()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch4_on </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6a4c018502ec4fc07fac763c9211d592"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a4c018502ec4fc07fac763c9211d592">&sect;&nbsp;</a></span>nScope_get_ch_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch_gain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0d529abaa5fd6669970dc7657621b216"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d529abaa5fd6669970dc7657621b216">&sect;&nbsp;</a></span>nScope_get_ch_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch_level </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa1a86d36b12e035f26f3622ebc6f61b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1a86d36b12e035f26f3622ebc6f61b9">&sect;&nbsp;</a></span>nScope_get_ch_on()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_ch_on </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6d192a5fefe48b2df47a53f9ee3b1562"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d192a5fefe48b2df47a53f9ee3b1562">&sect;&nbsp;</a></span>nScope_get_channel_gains()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_channel_gains </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
@@ -493,18 +144,28 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the channel gains for all channels. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 on success </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">channelGains</td><td>pointer to an array of doubles for retreiving the gain for each channel </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a8c5a404affeca184110c7b8c5a20624d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c5a404affeca184110c7b8c5a20624d">&sect;&nbsp;</a></span>nScope_get_channel_levels()</h2>
+<a id="a108653ff73012cf2e5daad252beb48fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a108653ff73012cf2e5daad252beb48fd">&sect;&nbsp;</a></span>nScope_get_channel_levels()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_channel_levels </td>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_get_channel_levels </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
@@ -521,24 +182,34 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the channel levels for all channels. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 on success </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">channelGains</td><td>pointer to an array of doubles for retreiving the level for each channel </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ad397c602d654152cd248ec4a2e95eb38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad397c602d654152cd248ec4a2e95eb38">&sect;&nbsp;</a></span>nScope_get_channels_on()</h2>
+<a id="a6ea2851fc4df8d1e23eed54197f77877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea2851fc4df8d1e23eed54197f77877">&sect;&nbsp;</a></span>nScope_get_channels_on()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_channels_on </td>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_get_channels_on </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *&#160;</td>
+          <td class="paramtype">bool *&#160;</td>
           <td class="paramname"><em>channelsOn</em>&#160;</td>
         </tr>
         <tr>
@@ -549,372 +220,29 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the channel states (on/off) for all channels. </p>
+<p>A true state means the channel is on and will sample if a request is sent</p>
+<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">channelsOn</td><td>pointer to an array of booleans for retreiving the on state for each channel </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ac600362768a4edaedca52a8b73a8c2c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac600362768a4edaedca52a8b73a8c2c5">&sect;&nbsp;</a></span>nScope_get_num_channels_on()</h2>
+<a id="a5033e36060076f10d307cbbdcf954ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5033e36060076f10d307cbbdcf954ef5">&sect;&nbsp;</a></span>nScope_get_ChX_gain()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_get_num_channels_on </td>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_get_ChX_gain </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a33e158034c2a697bdd43126808287563"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33e158034c2a697bdd43126808287563">&sect;&nbsp;</a></span>nScope_set_ch1_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch1_gain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>channelGain</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a174cc15d8d2b665e9a6e9e5f561f0bd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a174cc15d8d2b665e9a6e9e5f561f0bd3">&sect;&nbsp;</a></span>nScope_set_ch1_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch1_level </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>channelLevel</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7c1f8a101ce5df9ee2b229b4fde418f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c1f8a101ce5df9ee2b229b4fde418f4">&sect;&nbsp;</a></span>nScope_set_ch1_on()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch1_on </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>channelOn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abc94bb2edb28bb42a4d2c49b7846e3dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc94bb2edb28bb42a4d2c49b7846e3dc">&sect;&nbsp;</a></span>nScope_set_ch2_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch2_gain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>channelGain</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9c85aac18d8f1a3bd70b0b0b7896dff6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c85aac18d8f1a3bd70b0b0b7896dff6">&sect;&nbsp;</a></span>nScope_set_ch2_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch2_level </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>channelLevel</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a116ef3f02a62e15eada2fba3e44a707c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a116ef3f02a62e15eada2fba3e44a707c">&sect;&nbsp;</a></span>nScope_set_ch2_on()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch2_on </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>channelOn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a782093395231f87b80e62f5e430499d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a782093395231f87b80e62f5e430499d9">&sect;&nbsp;</a></span>nScope_set_ch3_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch3_gain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>channelGain</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abbb211f825baeccce1b6fc9df4b7c58a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbb211f825baeccce1b6fc9df4b7c58a">&sect;&nbsp;</a></span>nScope_set_ch3_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch3_level </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>channelLevel</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7c3f9bd343ce39afb4364a1f28928004"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c3f9bd343ce39afb4364a1f28928004">&sect;&nbsp;</a></span>nScope_set_ch3_on()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch3_on </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>channelOn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a754eb61cf6f19b6067a185e5b59750d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a754eb61cf6f19b6067a185e5b59750d6">&sect;&nbsp;</a></span>nScope_set_ch4_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch4_gain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>channelGain</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a499c27a6af21be30cbe943b98fb4d4fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a499c27a6af21be30cbe943b98fb4d4fa">&sect;&nbsp;</a></span>nScope_set_ch4_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch4_level </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>channelLevel</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a814b558275fe29983a75616add3e7f9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a814b558275fe29983a75616add3e7f9d">&sect;&nbsp;</a></span>nScope_set_ch4_on()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch4_on </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
-          <td class="paramname"><em>nScope</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>channelOn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a799e9e3181a01e80d4024b77bac01ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a799e9e3181a01e80d4024b77bac01ef9">&sect;&nbsp;</a></span>nScope_set_ch_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch_gain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
@@ -926,7 +254,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">double *&#160;</td>
           <td class="paramname"><em>channelGain</em>&#160;</td>
         </tr>
         <tr>
@@ -937,18 +265,28 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the gain of a given channel. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current gain of the given channel </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">ch</td><td>channel number to query </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ac231b8d00dc654515556799f42feea93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac231b8d00dc654515556799f42feea93">&sect;&nbsp;</a></span>nScope_set_ch_level()</h2>
+<a id="ab06fec4622272c7ac45743853a2e2ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06fec4622272c7ac45743853a2e2ae5">&sect;&nbsp;</a></span>nScope_get_ChX_level()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch_level </td>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_get_ChX_level </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
@@ -960,7 +298,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">double *&#160;</td>
           <td class="paramname"><em>channelLevel</em>&#160;</td>
         </tr>
         <tr>
@@ -971,18 +309,28 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the level of a given channel. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current level of the given channel </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">ch</td><td>channel number to query </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ab109409ee6ecb53dca06a2493f924291"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab109409ee6ecb53dca06a2493f924291">&sect;&nbsp;</a></span>nScope_set_ch_on()</h2>
+<a id="af629d8436a174b20a3d46b93b32138de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af629d8436a174b20a3d46b93b32138de">&sect;&nbsp;</a></span>nScope_get_ChX_on()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_ch_on </td>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_get_ChX_on </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
@@ -994,7 +342,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">bool *&#160;</td>
           <td class="paramname"><em>channelOn</em>&#160;</td>
         </tr>
         <tr>
@@ -1005,18 +353,66 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the on/off state of a given channel. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if the channel is on, 0 if it is not </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">ch</td><td>channel number to query </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a110d10429fb26cdb03ea992f81391398"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a110d10429fb26cdb03ea992f81391398">&sect;&nbsp;</a></span>nScope_set_channel_gains()</h2>
+<a id="aa272b74d32fb33c0d922ac95d88522c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa272b74d32fb33c0d922ac95d88522c6">&sect;&nbsp;</a></span>nScope_get_num_channels_on()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_channel_gains </td>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_get_num_channels_on </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
+          <td class="paramname"><em>nScope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>numChannelsOn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of channels currently on. </p>
+<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nScope</td><td>nScope handle </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">numChannelsOn</td><td>pointer to a variable for retreiving the number of channels on </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abf27c4f8b3ac886a4e91592b1edc1eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf27c4f8b3ac886a4e91592b1edc1eb1">&sect;&nbsp;</a></span>nScope_set_channel_gains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_set_channel_gains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
@@ -1051,18 +447,32 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the channel gains for all channels. </p>
+<p>A gain of 1 indicates</p>
+<dl class="section return"><dt>Returns</dt><dd>1 on success </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">ch1Gain</td><td>channel 1 gain </td></tr>
+    <tr><td class="paramname">ch2Gain</td><td>channel 2 gain </td></tr>
+    <tr><td class="paramname">ch3Gain</td><td>channel 3 gain </td></tr>
+    <tr><td class="paramname">ch4Gain</td><td>channel 4 gain </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a5946610f0521501b20584357bb395e20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5946610f0521501b20584357bb395e20">&sect;&nbsp;</a></span>nScope_set_channel_levels()</h2>
+<a id="a0de8c03b8301ab5a7b3a5656971458ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de8c03b8301ab5a7b3a5656971458ff">&sect;&nbsp;</a></span>nScope_set_channel_levels()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_channel_levels </td>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_set_channel_levels </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
@@ -1097,42 +507,56 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the channel levels for all channels. </p>
+<p>Level means:</p>
+<dl class="section return"><dt>Returns</dt><dd>1 on success </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">ch1Gain</td><td>channel 1 level </td></tr>
+    <tr><td class="paramname">ch2Gain</td><td>channel 2 level </td></tr>
+    <tr><td class="paramname">ch3Gain</td><td>channel 3 level </td></tr>
+    <tr><td class="paramname">ch4Gain</td><td>channel 4 level </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a53faa3f666b6f3f672e2cbbdcead3ec4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53faa3f666b6f3f672e2cbbdcead3ec4">&sect;&nbsp;</a></span>nScope_set_channels_on()</h2>
+<a id="af575926c9a8039dae219bed51d5e5bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af575926c9a8039dae219bed51d5e5bd4">&sect;&nbsp;</a></span>nScope_set_channels_on()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="n_scope_a_p_i_8h.html#abbca20ec18a7473bc5d9faaa388e4002">NSCOPE_API_EXPORT_CALL</a> nScope_set_channels_on </td>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_set_channels_on </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2">scopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>ch1on</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>ch2on</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>ch3on</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>ch4on</em>&#160;</td>
         </tr>
         <tr>
@@ -1143,18 +567,164 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the channel states (on/off) for all channels. </p>
+<p>A true state means the channel is on and will sample if a request is sent</p>
+<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nScope</td><td>nScope handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ch1on</td><td>true: turn channel 1 on, false: turn it off </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ch2on</td><td>true: turn channel 2 on, false: turn it off </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ch3on</td><td>true: turn channel 3 on, false: turn it off </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ch4on</td><td>true: turn channel 4 on, false: turn it off </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad0f127bad1e5a6055de83da66aba08db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0f127bad1e5a6055de83da66aba08db">&sect;&nbsp;</a></span>nScope_set_ChX_gain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_set_ChX_gain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
+          <td class="paramname"><em>nScope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>channelGain</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a given channel's gain. </p>
+<dl class="section return"><dt>Returns</dt><dd>the actual gain of the channel </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">ch</td><td>channel number to set on or off </td></tr>
+    <tr><td class="paramname">channelGain</td><td>the desired gain of the channel </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28a1abb29344cd277e389607b2933636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a1abb29344cd277e389607b2933636">&sect;&nbsp;</a></span>nScope_set_ChX_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_set_ChX_level </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
+          <td class="paramname"><em>nScope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>channelLevel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a given channel's level. </p>
+<dl class="section return"><dt>Returns</dt><dd>the actual level of the channel </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">ch</td><td>channel number to set on or off </td></tr>
+    <tr><td class="paramname">channelLevel</td><td>the desired level of the channel </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab52afb150e9b397c1c717a4b7edd63c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab52afb150e9b397c1c717a4b7edd63c9">&sect;&nbsp;</a></span>nScope_set_ChX_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_set_ChX_on </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
+          <td class="paramname"><em>nScope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>channelOn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a channel state on or off. </p>
+<p>A true state means the channel is on and will sample if a request is sent</p>
+<dl class="section return"><dt>Returns</dt><dd>1 on success </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nScope</td><td>pointer to nScope handle </td></tr>
+    <tr><td class="paramname">ch</td><td>channel number to set on or off </td></tr>
+    <tr><td class="paramname">channelOn</td><td>true: turn the channel on, false: turn the channel off </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_c086a797e1f8ae3f1bbc93a0b10bf3e7.html">nScopeAPI</a></li><li class="navelem"><a class="el" href="n_scope_a_p_i__analog_inputs_8h.html">nScopeAPI_analogInputs.h</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Tue Sep 13 2016 21:07:47 for nScopeAPI by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.12
+</small></address>
 </body>
 </html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scopehandle',['scopeHandle',['../n_scope_a_p_i_8h.html#a8398a4709cd3e5d9378ba1ff0febf2d2',1,'nScopeAPI.h']]]
+  ['scopehandle',['ScopeHandle',['../n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044',1,'nScopeAPI.h']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['overcurrent',['overcurrent',['../n_scope_a_p_i_8h.html#aa59b8ef6374ae587f3c228eba57bdf80a49f1bee530a2748f1d8aea75f502831d',1,'nScopeAPI.h']]]
+  ['errortype',['ErrorType',['../n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a',1,'nScopeAPI_defs.h']]]
 ];
