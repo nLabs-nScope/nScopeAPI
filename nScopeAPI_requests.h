@@ -23,8 +23,8 @@
 extern "C" {
 #endif
 
-	NSCOPE_API ErrorType nScope_request_data(ScopeHandle nScope, Request newRequest, int numSamples, int antiAliased);
-	NSCOPE_API ErrorType nScope_request_data_stream(ScopeHandle nScope, Request newRequest);
+	NSCOPE_API ErrorType nScope_request_data(ScopeHandle nScope, Request* newRequest_p, int numSamples, int antiAliased);
+	NSCOPE_API ErrorType nScope_request_data_stream(ScopeHandle nScope, Request* newRequest_p);
     NSCOPE_API ErrorType nScope_stop_request(ScopeHandle nScope, Request reqHandle);
     NSCOPE_API ErrorType nScope_release_request(ScopeHandle nScope, Request reqHandle);
     NSCOPE_API ErrorType nScope_wait_for_request_finish(ScopeHandle nScope,Request reqHandle);
