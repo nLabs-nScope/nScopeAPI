@@ -32,11 +32,7 @@
 extern "C" {
 #endif
 
-	struct scopeDev_;
-	typedef struct scopeDev_ *ScopeHandle; /**< nScope structure handle */
 
-	struct request_;
-	typedef struct request_ *Request; /**< nScope request handle */
 
 	/** @brief Open a connected nScope device and initialize it.
 
@@ -50,7 +46,7 @@ extern "C" {
         @param [out] nScope
             a handle to nScope
 	*/
-	NSCOPE_API ErrorType nScope_open(bool powerOn, ScopeHandle* nScope_p)
+	NSCOPE_API ErrorType nScope_open(bool powerOn, ScopeHandle* nScope_p);
 
     /** @brief Close and clean a connected nScope device.
 

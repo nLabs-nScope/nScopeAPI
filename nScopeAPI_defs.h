@@ -28,6 +28,12 @@
 
     #define NSCOPE_API NSCOPE_API_EXPORT NSCOPE_API_CALL /**< API export and call macro*/
 
+    struct scopeDev_;
+	typedef struct scopeDev_ *ScopeHandle; /**< nScope structure handle */
+
+	struct request_;
+	typedef struct request_ *Request; /**< nScope request handle */
+
     /** nScope error types
 
         return type for all nScopeAPI functions
