@@ -50,7 +50,7 @@ extern "C" {
         @param [out] nScope
             a handle to nScope
 	*/
-	NSCOPE_API ErrorType nScope_open(bool powerOn, ScopeHandle nScope);
+	NSCOPE_API ErrorType nScope_open(bool powerOn, ScopeHandle* nScope_p)
 
     /** @brief Close and clean a connected nScope device.
 
