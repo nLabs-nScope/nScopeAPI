@@ -85,6 +85,7 @@
     /** Power state of nScope */
     typedef enum
     {
+        NOT_CONNECTED = -1, /**< nScope is not connected */
         POWER_OFF =     0,  /**< power is off */
         POWER_ON =      1,  /**< power is on */
         SHORTED =       2,  /**< a short has been detected */
