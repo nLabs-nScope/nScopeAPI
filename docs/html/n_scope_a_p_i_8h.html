@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.12-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">nScopeAPI
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">v0.8</span>
    </div>
   </td>
  </tr>
@@ -64,7 +66,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">nScopeAPI.h File Reference</div>  </div>
@@ -73,41 +74,26 @@ $(function() {
 
 <p>Main header file that includes the entire API.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="n_scope_a_p_i__defs_8h_source.html">nScopeAPI_defs.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="n_scope_a_p_i__requests_8h_source.html">nScopeAPI_requests.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="n_scope_a_p_i__analog_inputs_8h_source.html">nScopeAPI_analogInputs.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="n_scope_a_p_i__sample_timing_8h_source.html">nScopeAPI_sampleTiming.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="n_scope_a_p_i__trigger_8h_source.html">nScopeAPI_trigger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="n_scope_a_p_i__analog_outputs_8h_source.html">nScopeAPI_analogOutputs.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="n_scope_a_p_i__pulse_generators_8h_source.html">nScopeAPI_pulseGenerators.h</a>&quot;</code><br />
-<code>#include &quot;stdbool.h&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:afadfb121255964520ac515c7eed66044"><td class="memItemLeft" align="right" valign="top">typedef struct scopeDev_ *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a></td></tr>
-<tr class="separator:afadfb121255964520ac515c7eed66044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e3f430582a7c19f1c6a94f9c861a587"><td class="memItemLeft" align="right" valign="top">typedef struct request_ *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a></td></tr>
-<tr class="separator:a9e3f430582a7c19f1c6a94f9c861a587"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9f8fce24c54ac75bf31f9732b9de5fdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a9f8fce24c54ac75bf31f9732b9de5fdc">nScope_open</a> (bool powerOn, <a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope)</td></tr>
-<tr class="memdesc:a9f8fce24c54ac75bf31f9732b9de5fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a connected nScope device and initialize it.  <a href="#a9f8fce24c54ac75bf31f9732b9de5fdc">More...</a><br /></td></tr>
-<tr class="separator:a9f8fce24c54ac75bf31f9732b9de5fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a7ed294d6b6cafc424c4e8a1f21e5a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a4a7ed294d6b6cafc424c4e8a1f21e5a2">nScope_close</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *nScope_p)</td></tr>
+<tr class="memitem:a98e504152c2bb3af5800faa5329f313d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a98e504152c2bb3af5800faa5329f313d">nScope_open</a> (bool powerOn, <a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *nScope_p)</td></tr>
+<tr class="memdesc:a98e504152c2bb3af5800faa5329f313d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a connected nScope device and initialize it.  <a href="#a98e504152c2bb3af5800faa5329f313d">More...</a><br /></td></tr>
+<tr class="separator:a98e504152c2bb3af5800faa5329f313d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7ed294d6b6cafc424c4e8a1f21e5a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a4a7ed294d6b6cafc424c4e8a1f21e5a2">nScope_close</a> (<a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *nScope_p)</td></tr>
 <tr class="memdesc:a4a7ed294d6b6cafc424c4e8a1f21e5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close and clean a connected nScope device.  <a href="#a4a7ed294d6b6cafc424c4e8a1f21e5a2">More...</a><br /></td></tr>
 <tr class="separator:a4a7ed294d6b6cafc424c4e8a1f21e5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51c7f2218e156bb0814050bf5bebd41a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a51c7f2218e156bb0814050bf5bebd41a">nScope_clean</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *nScope_p)</td></tr>
+<tr class="memitem:a51c7f2218e156bb0814050bf5bebd41a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a51c7f2218e156bb0814050bf5bebd41a">nScope_clean</a> (<a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *nScope_p)</td></tr>
 <tr class="memdesc:a51c7f2218e156bb0814050bf5bebd41a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up an nScope device.  <a href="#a51c7f2218e156bb0814050bf5bebd41a">More...</a><br /></td></tr>
 <tr class="separator:a51c7f2218e156bb0814050bf5bebd41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a977869cb5d59f00f9de9e0e5966c1a25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a977869cb5d59f00f9de9e0e5966c1a25">nScope_initialize</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope)</td></tr>
+<tr class="memitem:a977869cb5d59f00f9de9e0e5966c1a25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a977869cb5d59f00f9de9e0e5966c1a25">nScope_initialize</a> (<a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope)</td></tr>
 <tr class="memdesc:a977869cb5d59f00f9de9e0e5966c1a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize an nScope with the default configuration.  <a href="#a977869cb5d59f00f9de9e0e5966c1a25">More...</a><br /></td></tr>
 <tr class="separator:a977869cb5d59f00f9de9e0e5966c1a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5efa8a8e97b0ef15b663c76bccf58204"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a5efa8a8e97b0ef15b663c76bccf58204">nScope_get_power_usage</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, double *powerUsage)</td></tr>
+<tr class="memitem:a5efa8a8e97b0ef15b663c76bccf58204"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a5efa8a8e97b0ef15b663c76bccf58204">nScope_get_power_usage</a> (<a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, double *powerUsage)</td></tr>
 <tr class="memdesc:a5efa8a8e97b0ef15b663c76bccf58204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read how much power is being used by nScope.  <a href="#a5efa8a8e97b0ef15b663c76bccf58204">More...</a><br /></td></tr>
 <tr class="separator:a5efa8a8e97b0ef15b663c76bccf58204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a356ff1f3eccffea74cb60b6f3266b94c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a356ff1f3eccffea74cb60b6f3266b94c">nScope_get_power_state</a> (<a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i__defs_8h.html#aa59b8ef6374ae587f3c228eba57bdf80">PowerState</a> *powerState)</td></tr>
-<tr class="memdesc:a356ff1f3eccffea74cb60b6f3266b94c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read how much power is being used by nScope.  <a href="#a356ff1f3eccffea74cb60b6f3266b94c">More...</a><br /></td></tr>
+<tr class="memitem:a356ff1f3eccffea74cb60b6f3266b94c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#a356ff1f3eccffea74cb60b6f3266b94c">nScope_get_power_state</a> (<a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i__defs_8h.html#aa59b8ef6374ae587f3c228eba57bdf80">PowerState</a> *powerState)</td></tr>
+<tr class="memdesc:a356ff1f3eccffea74cb60b6f3266b94c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the <a class="el" href="n_scope_a_p_i__defs_8h.html#aa59b8ef6374ae587f3c228eba57bdf80">PowerState</a> of the nScope.  <a href="#a356ff1f3eccffea74cb60b6f3266b94c">More...</a><br /></td></tr>
 <tr class="separator:a356ff1f3eccffea74cb60b6f3266b94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acebe25f055a447e9cee79fb308ac9c3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i_8h.html#acebe25f055a447e9cee79fb308ac9c3c">nScope_find_firmware_loader</a> ()</td></tr>
 <tr class="memdesc:acebe25f055a447e9cee79fb308ac9c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">find the firmware loader  <a href="#acebe25f055a447e9cee79fb308ac9c3c">More...</a><br /></td></tr>
@@ -127,38 +113,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Documentation</h2>
 <div class="textblock"><p>Main header file that includes the entire API. </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a9e3f430582a7c19f1c6a94f9c861a587"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e3f430582a7c19f1c6a94f9c861a587">&sect;&nbsp;</a></span>Request</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct request_* <a class="el" href="n_scope_a_p_i_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>nScope request handle </p>
-
-</div>
-</div>
-<a id="afadfb121255964520ac515c7eed66044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afadfb121255964520ac515c7eed66044">&sect;&nbsp;</a></span>ScopeHandle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct scopeDev_* <a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>nScope structure handle </p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a5ac7d3f7ab4eff07fe0347d9d70a7593"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ac7d3f7ab4eff07fe0347d9d70a7593">&sect;&nbsp;</a></span>nScope_check_API_version()</h2>
 
@@ -176,7 +131,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>check the version of this API </p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">apiVersion</td><td>pointer to a variable to store the current API version </td></tr>
@@ -203,7 +158,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>check the version of the connected firmware </p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">fwVersion</td><td>pointer to a variable to store the current firmware version </td></tr>
@@ -222,7 +177,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_clean </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *&#160;</td>
           <td class="paramname"><em>nScope_p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -231,10 +186,10 @@ Functions</h2></td></tr>
 
 <p>Clean up an nScope device. </p>
 <p>This function cleans the memory that was used for an nScope object. This function is called by <a class="el" href="n_scope_a_p_i_8h.html#a4a7ed294d6b6cafc424c4e8a1f21e5a2" title="Close and clean a connected nScope device. ">nScope_close()</a>, so it is only needed when nScope is disconnected for an unknown reason.</p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nScope_p</td><td>pointer to an nScope handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nScope_p</td><td>pointer to a <a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> object </td></tr>
   </table>
   </dd>
 </dl>
@@ -250,7 +205,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_close </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *&#160;</td>
           <td class="paramname"><em>nScope_p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -258,10 +213,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Close and clean a connected nScope device. </p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nScope_p</td><td>pointer to an nScope handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nScope_p</td><td>pointer to a <a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> object </td></tr>
   </table>
   </dd>
 </dl>
@@ -284,7 +239,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>find the firmware loader </p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 
 </div>
 </div>
@@ -297,7 +252,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_get_power_state </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
@@ -314,8 +269,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Read how much power is being used by nScope. </p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<p>Read the <a class="el" href="n_scope_a_p_i__defs_8h.html#aa59b8ef6374ae587f3c228eba57bdf80">PowerState</a> of the nScope. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">nScope</td><td>nScope handle </td></tr>
@@ -335,7 +290,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_get_power_usage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em>, </td>
         </tr>
         <tr>
@@ -353,7 +308,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read how much power is being used by nScope. </p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">nScope</td><td>nScope handle </td></tr>
@@ -373,7 +328,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_initialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
           <td class="paramname"><em>nScope</em></td><td>)</td>
           <td></td>
         </tr>
@@ -381,9 +336,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize an nScope with the default configuration. </p>
-<p>This function is called by <a class="el" href="n_scope_a_p_i_8h.html#a9f8fce24c54ac75bf31f9732b9de5fdc" title="Open a connected nScope device and initialize it. ">nScope_open()</a>, so it's only needed to reset the configuration if it ever reaches an unknown state.</p>
+<p>This function is called by <a class="el" href="n_scope_a_p_i_8h.html#a98e504152c2bb3af5800faa5329f313d" title="Open a connected nScope device and initialize it. ">nScope_open()</a>, so it's only needed to reset the configuration if it ever reaches an unknown state.</p>
 <p>The default configuration is:</p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">nScope</td><td>nScope handle </td></tr>
@@ -410,12 +365,12 @@ Functions</h2></td></tr>
 
 <p>load the nScope with current firmware </p>
 <p>calls both <a class="el" href="n_scope_a_p_i_8h.html#acebe25f055a447e9cee79fb308ac9c3c" title="find the firmware loader ">nScope_find_firmware_loader()</a> and <a class="el" href="n_scope_a_p_i_8h.html#a9a491bfdb1aca557c10f46dc3532b2c1" title="write the firmware to the loader ">nScope_write_to_loader()</a></p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 
 </div>
 </div>
-<a id="a9f8fce24c54ac75bf31f9732b9de5fdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f8fce24c54ac75bf31f9732b9de5fdc">&sect;&nbsp;</a></span>nScope_open()</h2>
+<a id="a98e504152c2bb3af5800faa5329f313d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e504152c2bb3af5800faa5329f313d">&sect;&nbsp;</a></span>nScope_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,8 +384,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="n_scope_a_p_i_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
-          <td class="paramname"><em>nScope</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> *&#160;</td>
+          <td class="paramname"><em>nScope_p</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -441,12 +396,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open a connected nScope device and initialize it. </p>
-<p>Looks for a nScope device, connects to it, then runs <a class="el" href="n_scope_a_p_i_8h.html#a977869cb5d59f00f9de9e0e5966c1a25" title="Initialize an nScope with the default configuration. ">nScope_initialize()</a></p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<p>Looks for a nScope device, connects to it, then runs <a class="el" href="n_scope_a_p_i_8h.html#a977869cb5d59f00f9de9e0e5966c1a25" title="Initialize an nScope with the default configuration. ">nScope_initialize()</a> Stores the resulting <a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> object in *nScope_p</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">powerOn</td><td>true turns nScope on when first opened, false leaves nScope in its current state </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">nScope</td><td>a handle to nScope </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">nScope_p</td><td>a pointer to a <a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> object </td></tr>
   </table>
   </dd>
 </dl>
@@ -469,15 +424,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>write the firmware to the loader </p>
-<dl class="section return"><dt>Returns</dt><dd>nScope <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.12-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 18 2016 20:40:27 for nScopeAPI by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
+Generated on Fri Sep 30 2016 10:09:05 for nScopeAPI by <a href="http://www.doxygen.org/index.html">
+doxygen
 </a> 1.8.12
 </small></address>
 </body>

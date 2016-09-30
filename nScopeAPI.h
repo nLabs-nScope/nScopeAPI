@@ -37,23 +37,24 @@ extern "C" {
 	/** @brief Open a connected nScope device and initialize it.
 
         Looks for a nScope device, connects to it, then runs nScope_initialize()
+		Stores the resulting #ScopeHandle object in *nScope_p
 
 		@returns
-			nScope #ErrorType
+			#ErrorType
         @param [in] powerOn
             true turns nScope on when first opened, false leaves nScope in
             its current state
-        @param [out] nScope
-            a handle to nScope
+        @param [out] nScope_p
+            a pointer to a #ScopeHandle object
 	*/
 	NSCOPE_API ErrorType nScope_open(bool powerOn, ScopeHandle* nScope_p);
 
     /** @brief Close and clean a connected nScope device.
 
         @returns
-            nScope #ErrorType
+            #ErrorType
         @param [in] nScope_p
-            pointer to an nScope handle
+            pointer to a #ScopeHandle object
     */
 	NSCOPE_API ErrorType nScope_close(ScopeHandle* nScope_p);
 
@@ -64,9 +65,9 @@ extern "C" {
         unknown reason.
 
         @returns
-            nScope #ErrorType
+            #ErrorType
         @param [in] nScope_p
-            pointer to an nScope handle
+            pointer to a #ScopeHandle object
     */
     NSCOPE_API ErrorType nScope_clean(ScopeHandle* nScope_p);
 
@@ -78,7 +79,7 @@ extern "C" {
         The default configuration is:
 
         @returns
-            nScope #ErrorType
+            #ErrorType
         @param [in] nScope
             nScope handle
     */
@@ -87,7 +88,7 @@ extern "C" {
     /** @brief Read how much power is being used by nScope
 
         @returns
-            nScope #ErrorType
+            #ErrorType
         @param [in] nScope
             nScope handle
         @param [out] powerUsage
@@ -96,10 +97,10 @@ extern "C" {
     */
     NSCOPE_API ErrorType nScope_get_power_usage(ScopeHandle nScope, double *powerUsage);
 
-    /** @brief Read how much power is being used by nScope
+    /** @brief Read the #PowerState of the nScope
 
         @returns
-            nScope #ErrorType
+            #ErrorType
         @param [in] nScope
             nScope handle
         @param [out] powerState
@@ -110,14 +111,14 @@ extern "C" {
     /** @brief find the firmware loader
 
         @returns
-            nScope #ErrorType
+            #ErrorType
     */
     NSCOPE_API ErrorType nScope_find_firmware_loader();
 
     /** @brief write the firmware to the loader
 
         @returns
-            nScope #ErrorType
+            #ErrorType
     */
     NSCOPE_API ErrorType nScope_write_to_loader();
 
@@ -126,14 +127,14 @@ extern "C" {
         calls both nScope_find_firmware_loader() and nScope_write_to_loader()
 
         @returns
-            nScope #ErrorType
+            #ErrorType
     */
     NSCOPE_API ErrorType nScope_load_firmware();
 
     /** @brief check the version of this API
 
         @returns
-            nScope #ErrorType
+            #ErrorType
         @param [out] apiVersion
             pointer to a variable to store the current API version
     */
@@ -142,7 +143,7 @@ extern "C" {
     /** @brief check the version of the connected firmware
 
         @returns
-            nScope #ErrorType
+            #ErrorType
         @param [out] fwVersion
             pointer to a variable to store the current firmware version
     */

@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "nScopeAPI", "index.html", [
-    [ "nScopeAPI (C/C++)", "index.html", null ]
+    [ "Files", null, null ]
   ] ]
 ];
 

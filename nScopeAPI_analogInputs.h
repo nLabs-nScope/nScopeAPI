@@ -61,7 +61,7 @@ extern "C" {
         @returns
             nScope #ErrorType
         @param [in] nScope
-            nScope handle
+            #ScopeHandle
         @param [out] numChannelsOn
             pointer to a variable for retreiving the number of channels on
     */
@@ -72,12 +72,12 @@ extern "C" {
         A true state means the channel is on and will sample if a request is sent
 
         @returns
-            1 on success
-        @param nScope
-            pointer to nScope handle
-        @param ch
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[in] ch
             channel number to set on or off
-        @param channelOn
+        @param[in] channelOn
             true: turn the channel on, false: turn the channel off
     */
     NSCOPE_API ErrorType nScope_set_ChX_on(ScopeHandle nScope, int ch, bool channelOn);
@@ -85,11 +85,13 @@ extern "C" {
     /** @brief Get the on/off state of a given channel
 
         @returns
-            1 if the channel is on, 0 if it is not
-        @param nScope
-            pointer to nScope handle
-        @param ch
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[in] ch
             channel number to query
+        @param[out] channelOn
+            pointer to bool to store whether the channel is on or off
     */
     NSCOPE_API ErrorType nScope_get_ChX_on(ScopeHandle nScope, int ch, bool* channelOn);
 
@@ -98,16 +100,16 @@ extern "C" {
         A gain of 1 indicates
 
         @returns
-            1 on success
-        @param nScope
-            pointer to nScope handle
-        @param ch1Gain
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[in] ch1Gain
             channel 1 gain
-        @param ch2Gain
+        @param[in] ch2Gain
             channel 2 gain
-        @param ch3Gain
+        @param[in] ch3Gain
             channel 3 gain
-        @param ch4Gain
+        @param[in] ch4Gain
             channel 4 gain
     */
     NSCOPE_API ErrorType nScope_set_channel_gains(ScopeHandle nScope, double ch1Gain, double ch2Gain, double ch3Gain, double ch4Gain);
@@ -115,10 +117,10 @@ extern "C" {
     /** @brief Get the channel gains for all channels
 
         @returns
-            1 on success
-        @param nScope
-            pointer to nScope handle
-        @param channelGains
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[out] channelGains
             pointer to an array of doubles for retreiving the gain for each channel
     */
     NSCOPE_API ErrorType nScope_get_channel_gains(ScopeHandle nScope, double* channelGains);
@@ -126,12 +128,12 @@ extern "C" {
     /** @brief Set a given channel's gain
 
         @returns
-            the actual gain of the channel
-        @param nScope
-            pointer to nScope handle
-        @param ch
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[in] ch
             channel number to set on or off
-        @param channelGain
+        @param[in] channelGain
             the desired gain of the channel
     */
     NSCOPE_API ErrorType nScope_set_ChX_gain(ScopeHandle nScope, int ch, double channelGain);
@@ -139,11 +141,13 @@ extern "C" {
     /** @brief Get the gain of a given channel
 
         @returns
-            the current gain of the given channel
-        @param nScope
-            pointer to nScope handle
-        @param ch
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[in] ch
             channel number to query
+        @param[out] channelGain
+            pointer to double to store the channel gain
     */
     NSCOPE_API ErrorType nScope_get_ChX_gain(ScopeHandle nScope, int ch, double* channelGain);
 
@@ -152,16 +156,16 @@ extern "C" {
         Level means:
 
         @returns
-            1 on success
-        @param nScope
-            pointer to nScope handle
-        @param ch1Gain
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[in] ch1Level
             channel 1 level
-        @param ch2Gain
+        @param[in] ch2Level
             channel 2 level
-        @param ch3Gain
+        @param[in] ch3Level
             channel 3 level
-        @param ch4Gain
+        @param[in] ch4Level
             channel 4 level
     */
     NSCOPE_API ErrorType nScope_set_channel_levels(ScopeHandle nScope, double ch1Level, double ch2Level, double ch3Level, double ch4Level);
@@ -169,10 +173,10 @@ extern "C" {
     /** @brief Get the channel levels for all channels
 
         @returns
-            1 on success
-        @param nScope
-            pointer to nScope handle
-        @param channelGains
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[out] channelLevels
             pointer to an array of doubles for retreiving the level for each channel
     */
     NSCOPE_API ErrorType nScope_get_channel_levels(ScopeHandle nScope, double* channelLevels);
@@ -180,12 +184,12 @@ extern "C" {
     /** @brief Set a given channel's level
 
         @returns
-            the actual level of the channel
-        @param nScope
-            pointer to nScope handle
-        @param ch
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[in] ch
             channel number to set on or off
-        @param channelLevel
+        @param[out] channelLevel
             the desired level of the channel
     */
     NSCOPE_API ErrorType nScope_set_ChX_level(ScopeHandle nScope, int ch, double channelLevel);
@@ -193,11 +197,13 @@ extern "C" {
     /** @brief Get the level of a given channel
 
         @returns
-            the current level of the given channel
-        @param nScope
-            pointer to nScope handle
-        @param ch
+            nScope #ErrorType
+        @param[in] nScope
+            #ScopeHandle object
+        @param[in] ch
             channel number to query
+        @param[out] channelLevel
+            pointer to double to store the channel level
     */
     NSCOPE_API ErrorType nScope_get_ChX_level(ScopeHandle nScope, int ch, double* channelLevel);
 
