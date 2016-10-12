@@ -69,7 +69,7 @@ extern "C" {
 		To prevent memory leaks, the developer must call this function after
 		the request has finished an all data has been read.
 
-		On success, the #RequestHandle will be a null pointer
+		On success, the #Request handle will be a null pointer
 
 		@returns
 			#ErrorType
@@ -79,11 +79,81 @@ extern "C" {
 			pointer to #Request object to release
 	*/
     NSCOPE_API ErrorType nScope_release_request(ScopeHandle nScope, Request* reqHandle_p);
+
+	/** @brief wait for a request to finish
+
+		Blocks program execution until a request has finished transferring data from nScope
+
+		@returns
+			#ErrorType
+		@param [in] nScope
+			#ScopeHandle object
+		@param [in] reqHandle
+			#Request object to wait for
+	*/
     NSCOPE_API ErrorType nScope_wait_for_request_finish(ScopeHandle nScope,Request reqHandle);
+
+	/** @brief determine if a request has completed the transfer
+
+		Queries a request to see if the data has finished transferring, stores the result in
+		hasCompleted
+
+		@returns
+			#ErrorType
+		@param [in] nScope
+			#ScopeHandle object
+		@param [in] reqHandle
+			#Request object to query
+		@param [out] hasCompleted
+			pointer to bool to store the result of the query
+	*/
     NSCOPE_API ErrorType nScope_request_xfer_has_completed(ScopeHandle nScope, Request reqHandle, bool* hasCompleted);
+
+	/** @brief query the number of samples remaining in the request transfer
+
+		@warning not yet implemented
+
+	*/
     NSCOPE_API ErrorType nScope_request_xfer_samples_remaining(ScopeHandle nScope, Request reqHandle);
+
+	/** @brief Stop an infinite stream of data from nScope
+
+		@warning not yet implemented
+
+	*/
     NSCOPE_API ErrorType nScope_stop_data_stream(ScopeHandle nScope, Request reqHandle);
+
+	/** @brief Read data from the request
+
+		reads data from a specific channel on a request, and stores the result in data
+
+		@returns
+			#ErrorType
+		@param [in] nScope
+			#ScopeHandle object
+		@param [in] reqHandle
+			#Request object to query
+		@param [in] channel
+			channel to read
+		@param [out] data
+			pointer to double to store the read value on the request
+	*/
     NSCOPE_API ErrorType nScope_read_data(ScopeHandle nScope, Request reqHandle, int channel, double* data);
+
+	/** @brief determine if a request has unread data still stored in it
+
+		Queries a request to see if there is still data to be read, stores the result in
+		hasData
+
+		@returns
+			#ErrorType
+		@param [in] nScope
+			#ScopeHandle object
+		@param [in] reqHandle
+			#Request object to query
+		@param [out] hasData
+			pointer to bool to store the result of the query
+	*/
 	NSCOPE_API ErrorType nScope_request_has_data(ScopeHandle nScope, Request reqHandle, bool* hasData);
 
 #ifdef __cplusplus
