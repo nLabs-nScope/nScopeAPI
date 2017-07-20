@@ -6,8 +6,7 @@ var indexSectionsWithContent =
   3: "rs",
   4: "eptw",
   5: "cfinoprstuv",
-  6: "n",
-  7: "n"
+  6: "n"
 };
 
 var indexSectionNames =
@@ -18,8 +17,7 @@ var indexSectionNames =
   3: "typedefs",
   4: "enums",
   5: "enumvalues",
-  6: "defines",
-  7: "pages"
+  6: "defines"
 };
 
 var indexSectionLabels =
@@ -30,7 +28,6 @@ var indexSectionLabels =
   3: "Typedefs",
   4: "Enumerations",
   5: "Enumerator",
-  6: "Macros",
-  7: "Pages"
+  6: "Macros"
 };
 

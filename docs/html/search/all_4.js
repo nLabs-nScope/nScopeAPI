@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['nscopeapi',['nScopeAPI',['../index.html',1,'']]],
   ['no_5fdata_5favailable',['NO_DATA_AVAILABLE',['../n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45aa64e0f4e173eeffc365751a6b2122f645',1,'nScopeAPI_defs.h']]],
   ['not_5fconnected',['NOT_CONNECTED',['../n_scope_a_p_i__defs_8h.html#aa59b8ef6374ae587f3c228eba57bdf80a96c582a5af213ca7fb34f970d83875f5',1,'nScopeAPI_defs.h']]],
   ['nscope_5fapi',['NSCOPE_API',['../n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210',1,'nScopeAPI_defs.h']]],
