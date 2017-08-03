@@ -1,3 +1,19 @@
+/* Edited for nScope documentation */
+.tabs, .tabs2, .tabs3 {
+    background-image:none;
+    background-color: #E2E8F2;
+}
+
+.tablist li {
+    background-image: none;
+}
+
+.tablist a:hover {
+    background-image: none;
+    background-color: #95acd0;
+}
+
+
 /* The standard CSS for doxygen 1.8.12 */
 
 body, table, div, p, dl {
@@ -588,6 +604,7 @@ table.memberdecls {
         font-weight: bold;
         text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
         background-color: #DFE5F1;
+		background-image: none;
         /* opera specific markup */
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
         border-top-right-radius: 4px;
