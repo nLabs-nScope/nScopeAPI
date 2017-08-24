@@ -149,6 +149,15 @@ extern "C" {
     */
     NSCOPE_API ErrorType nScope_check_FW_version(double* fwVersion);
 
+	/** @brief check the build number of this API
+
+		@returns
+			#ErrorType
+		@param [out] apiVersion
+			pointer to a variable to store the current API build
+	*/
+	NSCOPE_API ErrorType nScope_check_API_build(int* buildNo);
+
 #ifdef __cplusplus
 }
 #endif

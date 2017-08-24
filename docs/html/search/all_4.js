@@ -7,6 +7,7 @@ var searchData=
   ['nscope_5fapi_5fcall',['NSCOPE_API_CALL',['../n_scope_a_p_i__defs_8h.html#a4eefaa7d430d9bc61db0242d99f49253',1,'nScopeAPI_defs.h']]],
   ['nscope_5fapi_5fexport',['NSCOPE_API_EXPORT',['../n_scope_a_p_i__defs_8h.html#aed243cad85b5ab4287395e31dba9d411',1,'nScopeAPI_defs.h']]],
   ['nscope_5fchannel_5foff',['NSCOPE_CHANNEL_OFF',['../n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45aaad5dc62639790f179f805b678fd6b40f',1,'nScopeAPI_defs.h']]],
+  ['nscope_5fcheck_5fapi_5fbuild',['nScope_check_API_build',['../n_scope_a_p_i_8h.html#a19742e3c816ba660c85b00aca3f36390',1,'nScopeAPI.h']]],
   ['nscope_5fcheck_5fapi_5fversion',['nScope_check_API_version',['../n_scope_a_p_i_8h.html#a5ac7d3f7ab4eff07fe0347d9d70a7593',1,'nScopeAPI.h']]],
   ['nscope_5fcheck_5ffw_5fversion',['nScope_check_FW_version',['../n_scope_a_p_i_8h.html#ae0d6783888ef9026eddd95d03833f17d',1,'nScopeAPI.h']]],
   ['nscope_5fclean',['nScope_clean',['../n_scope_a_p_i_8h.html#a51c7f2218e156bb0814050bf5bebd41a',1,'nScopeAPI.h']]],

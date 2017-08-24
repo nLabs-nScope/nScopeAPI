@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['nscope_5fcheck_5fapi_5fbuild',['nScope_check_API_build',['../n_scope_a_p_i_8h.html#a19742e3c816ba660c85b00aca3f36390',1,'nScopeAPI.h']]],
   ['nscope_5fcheck_5fapi_5fversion',['nScope_check_API_version',['../n_scope_a_p_i_8h.html#a5ac7d3f7ab4eff07fe0347d9d70a7593',1,'nScopeAPI.h']]],
   ['nscope_5fcheck_5ffw_5fversion',['nScope_check_FW_version',['../n_scope_a_p_i_8h.html#ae0d6783888ef9026eddd95d03833f17d',1,'nScopeAPI.h']]],
   ['nscope_5fclean',['nScope_clean',['../n_scope_a_p_i_8h.html#a51c7f2218e156bb0814050bf5bebd41a',1,'nScopeAPI.h']]],
