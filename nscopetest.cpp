@@ -1,16 +1,4 @@
-/*******************************************************
- nScopeAPI - Multi-Platform library for
- communication with nScope devices.
-
- David Meyer
-
- 10/23/2014
-
- Copyright 2014, All Rights Reserved.
-
-********************************************************/
-
-#include "nscopeapi.h"
+#include "include/nScopeAPI.h"
 #include <cstdio>
 #include <stdlib.h>
 
