@@ -1,21 +1,16 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Dec 20 15:59:02 2014
-
-@author: David J Meyer
-"""
-
 from ctypes import CDLL, Structure, POINTER, c_int, c_double, c_bool, cast, byref
+from .types import defineTypes
+
 import platform,os
 
 system = platform.system()
 
 if system == "Darwin":
-	nScopeAPI = CDLL(os.path.join(os.path.dirname(__file__), "../mac/libnscope.so"))
+	nScopeAPI = CDLL("lib/mac/libnscopeapi.dylib")
 elif system == "Windows":
-	nScopeAPI = CDLL(os.path.join(os.path.dirname(__file__), "../windows/libnscope.dll"))
+	nScopeAPI = CDLL("lib/win32/libnscopeapi.dll")
 elif system == "Linux":
-	nScopeAPI = CDLL(os.path.join(os.path.dirname(__file__), "../linux/libnscope.so"))
+	nScopeAPI = CDLL("lib/linux_i386/libnscopeapi.so"))
 
 nScopeAPI.nScope_check_API_version.restype = c_double
 nScopeAPI.nScope_check_FW_version.restype = c_double
