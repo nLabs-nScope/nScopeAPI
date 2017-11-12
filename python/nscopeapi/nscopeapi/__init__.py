@@ -10,7 +10,7 @@ if system == "Darwin":
 elif system == "Windows":
 	nScopeAPI = CDLL("lib/win32/libnscopeapi.dll")
 elif system == "Linux":
-	nScopeAPI = CDLL("lib/linux_i386/libnscopeapi.so"))
+	nScopeAPI = CDLL("lib/linux_i386/libnscopeapi.so")
 
 nScopeAPI.nScope_check_API_version.restype = c_double
 nScopeAPI.nScope_check_FW_version.restype = c_double
