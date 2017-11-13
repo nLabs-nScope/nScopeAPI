@@ -6,11 +6,11 @@ import platform,os
 system = platform.system()
 
 if system == "Darwin":
-	nScopeAPI = CDLL("lib/mac/libnscopeapi.dylib")
+	nScopeAPI = CDLL(os.path.join(os.path.dirname(__file__), "lib/mac/libnscopeapi.dylib"))
 elif system == "Windows":
-	nScopeAPI = CDLL("lib/win32/libnscopeapi.dll")
+	nScopeAPI = CDLL(os.path.join(os.path.dirname(__file__), "lib/win32/libnscopeapi.dll"))
 elif system == "Linux":
-	nScopeAPI = CDLL("lib/linux_i386/libnscopeapi.so")
+	nScopeAPI = CDLL(os.path.join(os.path.dirname(__file__), "lib/linux_i386/libnscopeapi.so"))
 
 nScopeAPI.nScope_check_API_version.restype = c_double
 nScopeAPI.nScope_check_FW_version.restype = c_double
