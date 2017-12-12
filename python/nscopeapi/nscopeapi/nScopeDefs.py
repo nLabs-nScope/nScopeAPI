@@ -3,12 +3,14 @@ import platform,os
 
 system = platform.system()
 
+print __file__
+print os.path.abspath(os.path.dirname(__file__))
 if system == "Darwin":
-	nScopeAPI = CDLL(os.path.join(os.path.dirname(__file__), "lib/mac/libnscopeapi.dylib"))
+	nScopeAPI = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/mac/libnscopeapi.dylib"))
 elif system == "Windows":
-	nScopeAPI = CDLL(os.path.join(os.path.dirname(__file__), "lib/win32/libnscopeapi.dll"))
+	nScopeAPI = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win32/libnscopeapi.dll"))
 elif system == "Linux":
-	nScopeAPI = CDLL(os.path.join(os.path.dirname(__file__), "lib/linux_i386/libnscopeapi.so"))
+	nScopeAPI = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_i386/libnscopeapi.so"))
 
 
 class scopeDev(Structure):
