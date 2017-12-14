@@ -27,62 +27,46 @@ class nScope(
 		else:
 			raise RuntimeError("Cannot connect to nScope")
 
+	def readCh1(self,numsamples,samplerate):
+		numsamples = int(numsamples)
+		self.setChannelsOn(True,False,False,False)
+		self.setSampleRateInHz(samplerate)
+		self.requestData(numsamples)
 
+		data = []
+		while self.requestHasData():
+			data.append(self.readData(1))
+		return data
 
+	def readCh2(self,numsamples,samplerate):
+		numsamples = int(numsamples)
+		self.setChannelsOn(False,True,False,False)
+		self.setSampleRateInHz(samplerate)
+		self.requestData(numsamples)
 
-	# def readCh1(self,numsamples,samplerate):
-	# 	numsamples = int(numsamples)
-	# 	self.setChannelsOn(1,0,0,0)
-	# 	self.setSampleRateInHz(samplerate)
-	# 	self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
-	# 	if not self.request:
-	# 		print 'Invalid Request'
-	# 		return
-	# 	data = []
-	# 	while(nScopeAPI.nScope_request_has_data(self.handle,self.request)):
-	# 		data.append(nScopeAPI.nScope_read_data(self.handle,byref(self.request),1))
-	# 	nScopeAPI.nScope_release_request(self.handle,byref(self.request))
-	# 	self.request = None
-	# 	return data
-	# def readCh2(self,numsamples,samplerate):
-	# 	numsamples = int(numsamples)
-	# 	self.setChannelsOn(0,1,0,0)
-	# 	self.setSampleRateInHz(samplerate)
-	# 	self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
-	# 	if not self.request:
-	# 		print 'Invalid Request'
-	# 		return
-	# 	data = []
-	# 	while(nScopeAPI.nScope_request_has_data(self.handle,self.request)):
-	# 		data.append(nScopeAPI.nScope_read_data(self.handle,byref(self.request),2))
-	# 	nScopeAPI.nScope_release_request(self.handle,byref(self.request))
-	# 	self.request = None
-	# 	return data
-	# def readCh3(self,numsamples,samplerate):
-	# 	numsamples = int(numsamples)
-	# 	self.setChannelsOn(0,0,1,0)
-	# 	self.setSampleRateInHz(samplerate)
-	# 	self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
-	# 	if not self.request:
-	# 		print 'Invalid Request'
-	# 		return
-	# 	data = []
-	# 	while(nScopeAPI.nScope_request_has_data(self.handle,self.request)):
-	# 		data.append(nScopeAPI.nScope_read_data(self.handle,byref(self.request),3))
-	# 	nScopeAPI.nScope_release_request(self.handle,byref(self.request))
-	# 	self.request = None
-	# 	return data
-	# def readCh4(self,numsamples,samplerate):
-	# 	numsamples = int(numsamples)
-	# 	self.setChannelsOn(0,0,0,1)
-	# 	self.setSampleRateInHz(samplerate)
-	# 	self.request = nScopeAPI.nScope_request_data(self.handle,numsamples,0)
-	# 	if not self.request:
-	# 		print 'Invalid Request'
-	# 		return
-	# 	data = []
-	# 	while(nScopeAPI.nScope_request_has_data(self.handle,self.request)):
-	# 		data.append(nScopeAPI.nScope_read_data(self.handle,byref(self.request),4))
-	# 	nScopeAPI.nScope_release_request(self.handle,byref(self.request))
-	# 	self.request = None
-	# 	return data
+		data = []
+		while self.requestHasData():
+			data.append(self.readData(2))
+		return data
+
+	def readCh3(self,numsamples,samplerate):
+		numsamples = int(numsamples)
+		self.setChannelsOn(False,False,True,False)
+		self.setSampleRateInHz(samplerate)
+		self.requestData(numsamples)
+
+		data = []
+		while self.requestHasData():
+			data.append(self.readData(3))
+		return data
+
+	def readCh4(self,numsamples,samplerate):
+		numsamples = int(numsamples)
+		self.setChannelsOn(False,False,False,True)
+		self.setSampleRateInHz(samplerate)
+		self.requestData(numsamples)
+
+		data = []
+		while self.requestHasData():
+			data.append(self.readData(4))
+		return data
