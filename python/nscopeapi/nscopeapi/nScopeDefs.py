@@ -3,8 +3,6 @@ import platform,os
 
 system = platform.system()
 
-print __file__
-print os.path.abspath(os.path.dirname(__file__))
 if system == "Darwin":
 	nScopeAPI = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/mac/libnscopeapi.dylib"))
 elif system == "Windows":
