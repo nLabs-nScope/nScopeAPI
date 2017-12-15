@@ -42,49 +42,49 @@ nScopeAPI.nScope_get_AX_amplitude.argtypes = [POINTER(scopeDev), c_int, POINTER(
             	# 		return 'Triangle'
 
 class Implementation:
-    def setAxOn(self,ax,axOn):
+    def setAXOn(self,ax,axOn):
         axOn = bool(axOn)
         nScopeAPI.nScope_set_AX_on(self.handle,ax,axOn)
         return
 
-    def getAxOn(self,ax):
+    def getAXOn(self,ax):
         axOn = c_bool()
         nScopeAPI.nScope_get_AX_on(self.handle,ax,byref(axOn))
         return axOn.value
 
-    def setAxFrequencyInHz(self,ax,axFrequency):
+    def setAXFrequencyInHz(self,ax,axFrequency):
         nScopeAPI.nScope_set_AX_frequency_in_hz(self.handle,ax,axFrequency)
         return
 
-    def getAxFrequencyInHz(self,ax):
+    def getAXFrequencyInHz(self,ax):
         axFrequency = c_double()
         nScopeAPI.nScope_get_AX_frequency_in_hz(self.handle,ax,byref(axFrequency))
         return axFrequency.value
 
-    def setAxWaveType(self,ax,axWave):
+    def setAXWaveType(self,ax,axWave):
         nScopeAPI.nScope_set_AX_wave_type(self.handle,ax,axWave)
         return
 
-    def getAxWaveType(self,ax):
+    def getAXWaveType(self,ax):
         axWave = c_int()
         nScopeAPI.nScope_get_AX_wave_type(self.handle,ax,byref(axWave))
         return axWave.value
 
-    def setAxUnipolar(self,ax,axUnipolar):
+    def setAXUnipolar(self,ax,axUnipolar):
         axUnipolar = bool(axUnipolar)
         nScopeAPI.nScope_set_AX_unipolar(self.handle,ax,axUnipolar)
         return
 
-    def getAxUnipolar(self,ax):
+    def getAXUnipolar(self,ax):
         axUnipolar = c_bool()
         nScopeAPI.nScope_get_AX_unipolar(self.handle,ax,byref(axUnipolar))
         return axUnipolar.value
 
-    def setAxAmplitude(self,ax,axAmplitude):
+    def setAXAmplitude(self,ax,axAmplitude):
         nScopeAPI.nScope_set_AX_amplitude(self.handle,ax,axAmplitude)
         return
 
-    def getAxAmplitude(self,ax):
+    def getAXAmplitude(self,ax):
         axAmplitude = c_double()
         nScopeAPI.nScope_get_AX_amplitude(self.handle,ax,byref(axAmplitude))
         return axAmplitude.value
