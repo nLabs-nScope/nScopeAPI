@@ -207,19 +207,6 @@ extern "C" {
     */
     NSCOPE_API ErrorType nScope_get_ChX_level(ScopeHandle nScope, int ch, double* channelLevel);
 
-  // NSCOPE_API ErrorType nScope_set_ch1_range(ScopeHandle nScope, double inputMin, double inputMax);
-  // NSCOPE_API ErrorType nScope_get_ch1_input_min(ScopeHandle nScope);
-  // NSCOPE_API ErrorType nScope_get_ch1_input_max(ScopeHandle nScope);
-  // NSCOPE_API ErrorType nScope_set_ch2_range(ScopeHandle nScope, double inputMin, double inputMax);
-  // NSCOPE_API ErrorType nScope_get_ch2_input_min(ScopeHandle nScope);
-  // NSCOPE_API ErrorType nScope_get_ch2_input_max(ScopeHandle nScope);
-  // NSCOPE_API ErrorType nScope_set_ch3_range(ScopeHandle nScope, double inputMin, double inputMax);
-  // NSCOPE_API ErrorType nScope_get_ch3_input_min(ScopeHandle nScope);
-  // NSCOPE_API ErrorType nScope_get_ch3_input_max(ScopeHandle nScope);
-  // NSCOPE_API ErrorType nScope_set_ch4_range(ScopeHandle nScope, double inputMin, double inputMax);
-  // NSCOPE_API ErrorType nScope_get_ch4_input_min(ScopeHandle nScope);
-  // NSCOPE_API ErrorType nScope_get_ch4_input_max(ScopeHandle nScope);
-
 
 #ifdef __cplusplus
 }
