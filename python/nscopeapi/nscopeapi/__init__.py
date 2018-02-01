@@ -1,29 +1,29 @@
 from ctypes import byref
-from nScopeDefs import *
+from nscopeapi.nScopeDefs import *
 
-import analogInputs
-import analogOutputs
-import pulseGenerators
-import requests
-import sampleTiming
-import trigger
+import nscopeapi.analogInputs
+import nscopeapi.analogOutputs
+import nscopeapi.pulseGenerators
+import nscopeapi.requests
+import nscopeapi.sampleTiming
+import nscopeapi.trigger
 
 class nScope(
-	analogInputs.Implementation,
-	analogOutputs.Implementation,
-	pulseGenerators.Implementation,
-	requests.Implementation,
-	sampleTiming.Implementation,
-	trigger.Implementation):
+	nscopeapi.analogInputs.Implementation,
+	nscopeapi.analogOutputs.Implementation,
+	nscopeapi.pulseGenerators.Implementation,
+	nscopeapi.requests.Implementation,
+	nscopeapi.sampleTiming.Implementation,
+	nscopeapi.trigger.Implementation):
 
 	def __init__(self):
 
 		self.handle = scopeHandle()
 		self.request = scopeRequest()
 
-		nScopeAPI.nScope_open(True,byref(self.handle))
+		lib.nScope_open(True,byref(self.handle))
 		if self.handle:
-			nScopeAPI.nScope_initialize(self.handle)
+			lib.nScope_initialize(self.handle)
 		else:
 			raise RuntimeError("Cannot connect to nScope")
 
