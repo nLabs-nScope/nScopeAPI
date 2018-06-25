@@ -1,7 +1,0 @@
-include nscopeapi/lib/linux_amd64/libnscopeapi.so
-include nscopeapi/lib/linux_arm64/libnscopeapi.so
-include nscopeapi/lib/linux_armhf/libnscopeapi.so
-include nscopeapi/lib/linux_i386/libnscopeapi.so
-include nscopeapi/lib/mac/libnscopeapi.dylib
-include nscopeapi/lib/win32/libnscopeapi.dll
-include nscopeapi/lib/win64/libnscopeapi.dll
