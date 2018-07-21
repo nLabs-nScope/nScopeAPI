@@ -2,13 +2,28 @@ from ctypes import CDLL, Structure, POINTER, byref, c_double, c_int, c_bool
 import platform,os
 
 system = platform.system()
+machine = platform.machine()
 
 if system == "Darwin":
 	lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/mac/libnscopeapi.dylib"))
+
 elif system == "Windows":
-	lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win32/libnscopeapi.dll"))
+	if machine == "i386":
+		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win32/libnscopeapi.dll"))
+	elif machine == "x86_64":
+		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win64/libnscopeapi.dll"))
+
 elif system == "Linux":
-	lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_i386/libnscopeapi.so"))
+	if machine == "i386":
+		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_i386/libnscopeapi.so"))
+	elif machine == "x86_64":
+		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_amd64/libnscopeapi.so"))
+	elif machine.startswith("armv7"):
+		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_armhf/libnscopeapi.so"))
+	elif machine.startswith("armv8") or machine.startswith("aarch64"):
+		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_arm64/libnscopeapi.so"))
+	else:
+		raise(EnvironmentError("Unrecognized machine type: '%s'" % machine))
 
 
 class scopeDev(Structure):
