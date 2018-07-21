@@ -1,3 +1,3 @@
 # nScopeAPI
 
-dynamic libraries are automatically placed in this directory by the build process
+dynamic libraries live in this directory. more documentation to come.
