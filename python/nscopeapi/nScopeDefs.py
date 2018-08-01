@@ -3,28 +3,41 @@ import platform,os
 
 system = platform.system()
 machine = platform.machine()
+architecture = platform.architecture()[0]
+
+intelMachines = ["i386","x86","x86_64"]
+armMachines = ["arm","armv7","armv71","armv7","armv8b","armv8l","aarch64","aarch64_be"]
 
 if system == "Darwin":
 	lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/mac/libnscopeapi.dylib"))
 
 elif system == "Windows":
-	if machine == "i386":
+	if architecture == "32bit":
 		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win32/libnscopeapi.dll"))
-	elif machine == "x86_64":
+	elif architecture == "64bit":
 		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win64/libnscopeapi.dll"))
+	else:
+		raise(EnvironmentError("Unrecognized architecture: '%s'" % architecture))
 
 elif system == "Linux":
-	if machine == "i386":
-		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_i386/libnscopeapi.so"))
-	elif machine == "x86_64":
-		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_amd64/libnscopeapi.so"))
-	elif machine.startswith("armv7"):
-		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_armhf/libnscopeapi.so"))
-	elif machine.startswith("armv8") or machine.startswith("aarch64"):
-		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_arm64/libnscopeapi.so"))
+	if machine in intelMachines:
+		if architecture == "32bit":
+			lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_i386/libnscopeapi.so"))
+		elif architecture == "64bit":
+			lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_amd64/libnscopeapi.so"))
+		else:
+			raise(EnvironmentError("Unrecognized architecture: '%s'" % architecture))
+	elif machine in armMachines:
+		if architecture == "32bit":
+			lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_armhf/libnscopeapi.so"))
+		elif architecture == "64bit":
+			lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_arm64/libnscopeapi.so"))
+		else:
+			raise(EnvironmentError("Unrecognized architecture: '%s'" % architecture))
 	else:
 		raise(EnvironmentError("Unrecognized machine type: '%s'" % machine))
-
+else:
+	raise(EnvironmentError("Unrecognized system type: '%s'" % system))
 
 class scopeDev(Structure):
 	pass
