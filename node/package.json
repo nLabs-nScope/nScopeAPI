@@ -1,8 +1,5 @@
 {
     "name": "nscopeapi",
     "gypfile": true,
-    "main": "./build/Release/nscopeapi",
-    "scripts": {
-      "postinstall": "npx copyfiles --up 1 ../lib/**/* ./"
-    }
+    "main": "./build/Release/nscopeapi"
   }
