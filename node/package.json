@@ -1,5 +1,0 @@
-{
-    "name": "nscopeapi",
-    "gypfile": true,
-    "main": "./build/Release/nscopeapi"
-  }
