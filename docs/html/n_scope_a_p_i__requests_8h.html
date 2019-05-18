@@ -120,6 +120,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a145bd898995ebf8510c9815b332d3d4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#a145bd898995ebf8510c9815b332d3d4a">nScope_read_data</a> (<a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i__defs_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle, int channel, double *data)</td></tr>
 <tr class="memdesc:a145bd898995ebf8510c9815b332d3d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from the request.  <a href="#a145bd898995ebf8510c9815b332d3d4a">More...</a><br /></td></tr>
 <tr class="separator:a145bd898995ebf8510c9815b332d3d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee91d46df1a845af9856f9eeaad7330"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#aaee91d46df1a845af9856f9eeaad7330">nScope_read_data_nonblocking</a> (<a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i__defs_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle, int channel, double *data)</td></tr>
+<tr class="memdesc:aaee91d46df1a845af9856f9eeaad7330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from the request.  <a href="#aaee91d46df1a845af9856f9eeaad7330">More...</a><br /></td></tr>
+<tr class="separator:aaee91d46df1a845af9856f9eeaad7330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e5f8d9bb0cb04ad3b587207c358ebe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n_scope_a_p_i__requests_8h.html#a3e5f8d9bb0cb04ad3b587207c358ebe5">nScope_request_has_data</a> (<a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> nScope, <a class="el" href="n_scope_a_p_i__defs_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> reqHandle, bool *hasData)</td></tr>
 <tr class="memdesc:a3e5f8d9bb0cb04ad3b587207c358ebe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">determine if a request has unread data still stored in it  <a href="#a3e5f8d9bb0cb04ad3b587207c358ebe5">More...</a><br /></td></tr>
 <tr class="separator:a3e5f8d9bb0cb04ad3b587207c358ebe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +168,57 @@ Functions</h2></td></tr>
 
 <p>Read data from the request. </p>
 <p>reads data from a specific channel on a request, and stores the result in data</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nScope</td><td><a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a> object </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reqHandle</td><td><a class="el" href="n_scope_a_p_i__defs_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a> object to query </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>channel to read </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>pointer to double to store the read value on the request </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aaee91d46df1a845af9856f9eeaad7330"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="n_scope_a_p_i__defs_8h.html#acc778a65b9dda7f19ac7b41d7f36f210">NSCOPE_API</a> <a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> nScope_read_data_nonblocking </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i__defs_8h.html#afadfb121255964520ac515c7eed66044">ScopeHandle</a>&#160;</td>
+          <td class="paramname"><em>nScope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="n_scope_a_p_i__defs_8h.html#a9e3f430582a7c19f1c6a94f9c861a587">Request</a>&#160;</td>
+          <td class="paramname"><em>reqHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read data from the request. </p>
+<p>reads data from a specific channel on a request, and stores the result in data, will not block to wait for more data to arrive from the device</p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="n_scope_a_p_i__defs_8h.html#ab0df38968e4f03a3f1f6d6df0f31f45a">ErrorType</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -521,7 +575,7 @@ Functions</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.12-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 2 2019 03:30:06 for nScopeAPI by <a href="http://www.doxygen.org/index.html">
+Generated on Sat May 18 2019 15:25:18 for nScopeAPI by <a href="http://www.doxygen.org/index.html">
 doxygen
 </a> 1.8.11
 </small></address>

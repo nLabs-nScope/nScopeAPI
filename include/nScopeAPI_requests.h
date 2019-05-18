@@ -140,6 +140,24 @@ extern "C" {
 	*/
     NSCOPE_API ErrorType nScope_read_data(ScopeHandle nScope, Request reqHandle, int channel, double* data);
 
+	/** @brief Read data from the request
+
+		reads data from a specific channel on a request, and stores the result in data, 
+		will not block to wait for more data to arrive from the device
+
+		@returns
+			#ErrorType
+		@param [in] nScope
+			#ScopeHandle object
+		@param [in] reqHandle
+			#Request object to query
+		@param [in] channel
+			channel to read
+		@param [out] data
+			pointer to double to store the read value on the request
+	*/
+	NSCOPE_API ErrorType nScope_read_data_nonblocking(ScopeHandle nScope, Request reqHandle, int channel, double* data);
+
 	/** @brief determine if a request has unread data still stored in it
 
 		Queries a request to see if there is still data to be read, stores the result in

@@ -49,6 +49,7 @@ var searchData=
   ['nscope_5fload_5ffirmware',['nScope_load_firmware',['../n_scope_a_p_i_8h.html#a6a7951e52341b9973a137c1c3766906a',1,'nScopeAPI.h']]],
   ['nscope_5fopen',['nScope_open',['../n_scope_a_p_i_8h.html#a98e504152c2bb3af5800faa5329f313d',1,'nScopeAPI.h']]],
   ['nscope_5fread_5fdata',['nScope_read_data',['../n_scope_a_p_i__requests_8h.html#a145bd898995ebf8510c9815b332d3d4a',1,'nScopeAPI_requests.h']]],
+  ['nscope_5fread_5fdata_5fnonblocking',['nScope_read_data_nonblocking',['../n_scope_a_p_i__requests_8h.html#aaee91d46df1a845af9856f9eeaad7330',1,'nScopeAPI_requests.h']]],
   ['nscope_5frelease_5frequest',['nScope_release_request',['../n_scope_a_p_i__requests_8h.html#a1b5b81d976f70d259dd7838306be57ac',1,'nScopeAPI_requests.h']]],
   ['nscope_5frequest_5fdata',['nScope_request_data',['../n_scope_a_p_i__requests_8h.html#af2a2aa9ead3222108387d775aad71bb9',1,'nScopeAPI_requests.h']]],
   ['nscope_5frequest_5fdata_5fstream',['nScope_request_data_stream',['../n_scope_a_p_i__requests_8h.html#aba51b91c72d828c4028628ed41f167f2',1,'nScopeAPI_requests.h']]],
