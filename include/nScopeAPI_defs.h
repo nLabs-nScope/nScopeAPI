@@ -69,6 +69,8 @@
         VALUE_ERROR_TOO_LARGE =     -111,
         /** Value error: a parameter is out of range */
         VALUE_ERROR_OUT_OF_RANGE =  -112,
+        /** Awaiting more data from the request transfer */
+        WAITING_FOR_DATA =          -113,
         /** Value warning: a parameter is very small */
         VALUE_WARNING_TOO_SMALL =   -120,
         /** Value warning: a parameter is very large */

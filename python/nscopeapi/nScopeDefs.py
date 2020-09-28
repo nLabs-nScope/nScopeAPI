@@ -79,26 +79,32 @@ lib.nScope_check_FW_version.argtypes = [POINTER(c_double)]
 lib.nScope_check_API_build.restype = c_int
 lib.nScope_check_API_build.argtypes = [POINTER(c_int)]
 
-def checkAPIver():
-	APIver = c_double()
-	lib.nScope_check_API_version(byref(APIver))
-	return APIver.value
+class Basics:
+	def getPowerState(self):
+		powerState = c_int()
+		lib.nScope_get_power_state(self.handle,byref(powerState))
+		return powerState.value
 
-def checkAPIbuild():
-	APIbuild = c_int()
-	lib.nScope_check_API_build(byref(APIbuild))
-	return APIbuild.value
+	def checkAPIver(self):
+		APIver = c_double()
+		lib.nScope_check_API_version(byref(APIver))
+		return APIver.value
 
-def checkFWver():
-	FWver = c_double()
-	lib.nScope_check_FW_version(byref(FWver))
-	return FWver.value
+	def checkAPIbuild(self):
+		APIbuild = c_int()
+		lib.nScope_check_API_build(byref(APIbuild))
+		return APIbuild.value
 
-def findFirmwareLoader():
-	lib.nScope_find_firmware_loader()
+	def checkFWver(self):
+		FWver = c_double()
+		lib.nScope_check_FW_version(byref(FWver))
+		return FWver.value
 
-def writeToLoader():
-    lib.nScope_write_to_loader()
+	def findFirmwareLoader(self):
+		lib.nScope_find_firmware_loader()
 
-def loadFirmware():
-	lib.nScope_load_firmware()
+	def writeToLoader(self):
+		lib.nScope_write_to_loader()
+
+	def loadFirmware(self):
+		lib.nScope_load_firmware()

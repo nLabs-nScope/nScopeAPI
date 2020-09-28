@@ -23,6 +23,7 @@ def ERR(error):
 
 
 class nScope(
+	nscopeapi.nScopeDefs.Basics,
 	nscopeapi.analogInputs.Implementation,
 	nscopeapi.analogOutputs.Implementation,
 	nscopeapi.pulseGenerators.Implementation,
