@@ -9,41 +9,41 @@ intelMachines = ["i386","x86","x86_64"]
 armMachines = ["arm","armv7","armv71","armv7","armv8b","armv8l","aarch64","aarch64_be"]
 
 if system == "Darwin":
-	lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/mac/libnscopeapi.dylib"))
+        lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/mac/libnscopeapi.dylib"))
 
 elif system == "Windows":
-	if architecture == "32bit":
-		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win32/libnscopeapi.dll"))
-	elif architecture == "64bit":
-		lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win64/libnscopeapi.dll"))
-	else:
-		raise(EnvironmentError("Unrecognized architecture: '%s'" % architecture))
+        if architecture == "32bit":
+                lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win32/libnscopeapi.dll"))
+        elif architecture == "64bit":
+                lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/win64/libnscopeapi.dll"))
+        else:
+                raise(EnvironmentError("Unrecognized architecture: '%s'" % architecture))
 
 elif system == "Linux":
-	if machine in intelMachines:
-		if architecture == "32bit":
-			lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_i386/libnscopeapi.so"))
-		elif architecture == "64bit":
-			lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_amd64/libnscopeapi.so"))
-		else:
-			raise(EnvironmentError("Unrecognized architecture: '%s'" % architecture))
-	elif machine in armMachines:
-		if architecture == "32bit":
-			lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_armhf/libnscopeapi.so"))
-		elif architecture == "64bit":
-			lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_arm64/libnscopeapi.so"))
-		else:
-			raise(EnvironmentError("Unrecognized architecture: '%s'" % architecture))
-	else:
-		raise(EnvironmentError("Unrecognized machine type: '%s'" % machine))
+        if machine in intelMachines:
+                if architecture == "32bit":
+                        lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_i386/libnscopeapi.so"))
+                elif architecture == "64bit":
+                        lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_amd64/libnscopeapi.so"))
+                else:
+                        raise(EnvironmentError("Unrecognized architecture: '%s'" % architecture))
+        elif machine in armMachines:
+                if architecture == "32bit":
+                        lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_armhf/libnscopeapi.so"))
+                elif architecture == "64bit":
+                        lib = CDLL(os.path.join(os.path.abspath(os.path.dirname(__file__)), "lib/linux_arm64/libnscopeapi.so"))
+                else:
+                        raise(EnvironmentError("Unrecognized architecture: '%s'" % architecture))
+        else:
+                raise(EnvironmentError("Unrecognized machine type: '%s'" % machine))
 else:
-	raise(EnvironmentError("Unrecognized system type: '%s'" % system))
+        raise(EnvironmentError("Unrecognized system type: '%s'" % system))
 
 class scopeDev(Structure):
-	pass
+        pass
 
 class requestObj(Structure):
-	pass
+        pass
 
 scopeHandle = POINTER(scopeDev)
 scopeRequest = POINTER(requestObj)
@@ -80,31 +80,36 @@ lib.nScope_check_API_build.restype = c_int
 lib.nScope_check_API_build.argtypes = [POINTER(c_int)]
 
 class Basics:
-	def getPowerState(self):
-		powerState = c_int()
-		lib.nScope_get_power_state(self.handle,byref(powerState))
-		return powerState.value
+        def getPowerState(self):
+                powerState = c_int()
+                lib.nScope_get_power_state(self.handle,byref(powerState))
+                return powerState.value
 
-	def checkAPIver(self):
-		APIver = c_double()
-		lib.nScope_check_API_version(byref(APIver))
-		return APIver.value
+        def getPowerUsage(self):
+                powerUsage = c_double()
+                lib.nScope_get_power_usage(self.handle, byref(powerUsage))
+                return powerUsage.value
 
-	def checkAPIbuild(self):
-		APIbuild = c_int()
-		lib.nScope_check_API_build(byref(APIbuild))
-		return APIbuild.value
+        def checkAPIver(self):
+                APIver = c_double()
+                lib.nScope_check_API_version(byref(APIver))
+                return APIver.value
 
-	def checkFWver(self):
-		FWver = c_double()
-		lib.nScope_check_FW_version(byref(FWver))
-		return FWver.value
+        def checkAPIbuild(self):
+                APIbuild = c_int()
+                lib.nScope_check_API_build(byref(APIbuild))
+                return APIbuild.value
 
-	def findFirmwareLoader(self):
-		lib.nScope_find_firmware_loader()
+        def checkFWver(self):
+                FWver = c_double()
+                lib.nScope_check_FW_version(byref(FWver))
+                return FWver.value
 
-	def writeToLoader(self):
-		lib.nScope_write_to_loader()
+        def findFirmwareLoader(self):
+                lib.nScope_find_firmware_loader()
 
-	def loadFirmware(self):
-		lib.nScope_load_firmware()
+        def writeToLoader(self):
+                lib.nScope_write_to_loader()
+
+        def loadFirmware(self):
+                lib.nScope_load_firmware()
