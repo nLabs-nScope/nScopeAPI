@@ -51,6 +51,7 @@ class nScope(
 		data = []
 		while self.requestHasData():
 			data.append(self.readData(1))
+		self.releaseRequest()
 		return data
 
 	def readCh2(self,numsamples,samplerate):
@@ -62,6 +63,7 @@ class nScope(
 		data = []
 		while self.requestHasData():
 			data.append(self.readData(2))
+		self.releaseRequest()
 		return data
 
 	def readCh3(self,numsamples,samplerate):
@@ -73,6 +75,7 @@ class nScope(
 		data = []
 		while self.requestHasData():
 			data.append(self.readData(3))
+		self.releaseRequest()
 		return data
 
 	def readCh4(self,numsamples,samplerate):
@@ -84,4 +87,5 @@ class nScope(
 		data = []
 		while self.requestHasData():
 			data.append(self.readData(4))
+		self.releaseRequest()
 		return data

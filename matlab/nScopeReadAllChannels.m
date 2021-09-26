@@ -27,6 +27,6 @@ while(nScopeAPI('requestHasData'))
     data(i,4) = nScopeAPI('readData',4);
 end
 
-
+nScopeAPI('releaseRequest');
 end
 
